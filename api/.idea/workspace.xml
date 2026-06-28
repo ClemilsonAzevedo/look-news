@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="348b6d45-cf02-4ff3-a6af-783a0b72c4fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cmd/api/api.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/feed/http/handler/health.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/feed/http/handler/news.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/feed/http/helpers/parse_duration.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/feed/http/helpers/write_json.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/feed/http/middlawares/cors.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="20" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+        <option value="Dockerfile" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="2.9366843884036897E-25" />
+      <entry key="MS500" value="1.6533809499003405E-5" />
+      <entry key="S2" value="0.10444103426271395" />
+      <entry key="S5" value="0.6126255514631266" />
+      <entry key="S10" value="1.1085607535828916" />
+      <entry key="S30" value="1.7691577449860623" />
+      <entry key="S60" value="2.169884643164346" />
+      <entry key="M2" value="2.554697351118494" />
+      <entry key="M5" value="3.789663775642717" />
+      <entry key="M10" value="6.993778885303803" />
+      <entry key="M15" value="10.357813873220033" />
+      <entry key="M30" value="18.895090407223233" />
+      <entry key="H1" value="29.187050347775887" />
+      <entry key="H2" value="37.967981997083214" />
+      <entry key="H4" value="46.76376076589366" />
+      <entry key="D1" value="533.3588511276" />
+      <entry key="W1" value="1733.1778693111048" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0004250735172344" />
+      <entry key="MS500" value="1.2116863280906318" />
+      <entry key="S2" value="1.6783021637238358" />
+      <entry key="S5" value="1.856188284546457" />
+      <entry key="S10" value="1.9253044280378522" />
+      <entry key="S30" value="1.9744559589072335" />
+      <entry key="S60" value="1.9896359907926124" />
+      <entry key="M2" value="2.1032217852300636" />
+      <entry key="M5" value="3.129255606594665" />
+      <entry key="M10" value="4.640207489005002" />
+      <entry key="M15" value="5.703198808932543" />
+      <entry key="M30" value="8.084279030286375" />
+      <entry key="H1" value="11.085387396714514" />
+      <entry key="H2" value="13.794400243772863" />
+      <entry key="H4" value="16.674805581969494" />
+      <entry key="D1" value="153.78829498243792" />
+      <entry key="W1" value="375.6144233973337" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="4.4931037628190057E-4" />
+      <entry key="MS500" value="0.21479479037008814" />
+      <entry key="S2" value="0.9297412700642875" />
+      <entry key="S5" value="1.907440830428495" />
+      <entry key="S10" value="2.6871421983697936" />
+      <entry key="S30" value="3.6076364325878747" />
+      <entry key="S60" value="4.087958877422699" />
+      <entry key="M2" value="4.61967138209926" />
+      <entry key="M5" value="6.897098107696005" />
+      <entry key="M10" value="11.616594895858414" />
+      <entry key="M15" value="16.045570256738856" />
+      <entry key="M30" value="26.966928915231755" />
+      <entry key="H1" value="40.263322776069046" />
+      <entry key="H2" value="51.75657075810928" />
+      <entry key="H4" value="63.43502337008791" />
+      <entry key="D1" value="687.1414402892144" />
+      <entry key="W1" value="2108.7902442289333" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="3FUVyqdruHdKlM5482KOfcw6Mae" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Build.go build cmd/.executor": "Profiler#5",
+    "Go Build.go build github.com/clemilsonazevedo/look-news/cmd/web.executor": "Run",
+    "Go Build.go build main.go.executor": "Run",
+    "Makefile Target.hello.executor": "Run",
+    "Makefile Target.run.executor": "Run",
+    "Makefile Target.tidy.executor": "Run",
+    "Makefile Target.vet.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.GoLinterPluginOnboardingV2": "true",
+    "RunOnceActivity.GoLinterPluginStorageMigration": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.go.analysis.ui.options.defaults": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "go.sdk.automatically.set": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/clema/www/personal/look-news/api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/internal/feed/http" />
+      <recent name="$PROJECT_DIR$/internal/feed" />
+      <recent name="$PROJECT_DIR$/internal/http" />
+      <recent name="$PROJECT_DIR$/cmd/api" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="GoApplicationRunConfiguration" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="GoApplicationRunConfiguration">
+          <value>
+            <map>
+              <entry key="go build cmd/" value="FAILED" />
+              <entry key="go build github.com/clemilsonazevedo/look-news/cmd/web" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Makefile Target.run">
+    <configuration name="go build api/" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$/cmd/api" />
+      <auto_managed_config_id value="$PROJECT_DIR$/cmd/api" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build cmd/" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$/cmd" />
+      <auto_managed_config_id value="$PROJECT_DIR$/cmd" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/clemilsonazevedo/look-news/cmd/web" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/clemilsonazevedo/look-news/cmd/web" />
+      <directory value="$PROJECT_DIR$" />
+      <auto_managed_config_id value="$PROJECT_DIR$/cmd/web" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/clemilsonazevedo/look-news/internal/RSS" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/clemilsonazevedo/look-news/internal/RSS" />
+      <directory value="$PROJECT_DIR$" />
+      <auto_managed_config_id value="$PROJECT_DIR$/internal/RSS" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/cmd/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="hello" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="hello" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="run" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/makefile" target="run" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="tidy" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="tidy" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="vet" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="vet" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.run" />
+        <item itemvalue="Makefile Target.tidy" />
+        <item itemvalue="Makefile Target.vet" />
+        <item itemvalue="Makefile Target.hello" />
+        <item itemvalue="Go Build.go build main.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-72a9cf600ed8-3dd3895e5e08-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-261.25134.147" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-GO-261.25134.147" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="348b6d45-cf02-4ff3-a6af-783a0b72c4fd" name="Changes" comment="" />
+      <created>1782129892608</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782129892608</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoModernizerVersionTracker">
+    <upgrades>
+      <map>
+        <entry key="$PROJECT_DIR$/go.mod">
+          <value>
+            <VersionUpgradeInfo>
+              <version>1.26.4</version>
+              <timestamp>1782188872494</timestamp>
+            </VersionUpgradeInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/internal/feed/http/helpers/go.work">
+          <value>
+            <VersionUpgradeInfo>
+              <version>1.26</version>
+              <timestamp>1782557887355</timestamp>
+            </VersionUpgradeInfo>
+          </value>
+        </entry>
+      </map>
+    </upgrades>
+  </component>
+</project>
