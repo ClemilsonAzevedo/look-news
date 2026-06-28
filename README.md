@@ -44,6 +44,7 @@ make run
 ```
 
 A página web sobe em `http://localhost:5173`.
+
 O servidor sobe em `http://localhost:8080`.
 
 Os feeds são agregados automaticamente na inicialização e actualizados a cada hora.
