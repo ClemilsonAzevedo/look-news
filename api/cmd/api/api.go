@@ -16,7 +16,25 @@ import (
 )
 
 func InitServer(feedURLs []string) error {
-	cache := feed.NewCache(feedURLs, 24*time.Hour, 1*time.Hour)
+	f, err := feed.Start(
+		os.Getenv("FILTRO_PYTHON"),
+		os.Getenv("FILTRO_SCRIPT"),
+		os.Getenv("FILTRO_QUERY"),
+	)
+	if err != nil {
+		return fmt.Errorf("subindo o filtro: %w", err)
+	}
+	defer func(f *feed.Filter) {
+		err := f.Close()
+		if err != nil {
+
+		}
+	}(f)
+
+	cache, err := feed.NewCache(feedURLs, 24*time.Hour, 1*time.Hour, f)
+	if err != nil {
+		return err
+	}
 
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
@@ -47,8 +65,10 @@ func InitServer(feedURLs []string) error {
 	}()
 
 	count, newest := cache.Stats()
-	fmt.Printf("HTTP SERVER RUNNING 🔥| %d artigos | mais recente: %s\n",
-		count, newest.Format("02 Jan 15:04"))
+	fmt.Printf(
+		"HTTP SERVER RUNNING 🔥| %d artigos | mais recente: %s\n",
+		count, newest.Format("02 Jan 15:04"),
+	)
 
 	if err := srv.ListenAndServe(); !errors.Is(err, http.ErrServerClosed) {
 		return err

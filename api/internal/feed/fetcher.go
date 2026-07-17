@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-var httpClient = &http.Client{Timeout: 15 * time.Second}
+var httpClient = &http.Client{Timeout: 10 * time.Minute}
 
 type Result struct {
 	URL  string

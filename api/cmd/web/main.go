@@ -8,18 +8,17 @@ import (
 
 var feedURLs = []string{
 	"https://www.tabnews.com.br/recentes/rss",
-	"https://techcrunch.com/feed/",
-	"https://news.bitcoin.com/feed/",
 	"https://tecnoblog.net/feed/",
 	"https://canaltech.com.br/rss/",
-	"https://feeds.feedburner.com/TheHackersNews",
+	"https://techcrunch.com/feed/",
+	"https://news.bitcoin.com/feed/",
 	"https://www.securityweek.com/feed/",
-	"https://www.freecodecamp.org/news/rss/",
+	"https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en",
+	"https://feeds.feedburner.com/TheHackersNews",
 	"https://www.freecodecamp.org/news/rss/",
 	"https://newsletter.pragmaticengineer.com/feed",
 	"https://blog.bytebytego.com/feed",
-	"https://techcrunch.com/feed/",
-	"https://spacetoday.com.br/feed/",
+	"https://medium.com/feed/netflix-techblog",
 }
 
 func main() {

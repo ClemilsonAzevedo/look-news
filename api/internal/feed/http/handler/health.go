@@ -1,11 +1,11 @@
 package handler
 
 import (
-  "net/http"
-  "time"
+	"net/http"
+	"time"
 
-  "github.com/clemilsonazevedo/look-news/internal/feed"
-  "github.com/clemilsonazevedo/look-news/internal/feed/http/helpers"
+	"github.com/clemilsonazevedo/look-news/internal/feed"
+	"github.com/clemilsonazevedo/look-news/internal/feed/http/helpers"
 )
 
 func HealthHandler(cache *feed.Cache) http.HandlerFunc {

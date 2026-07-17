@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="348b6d45-cf02-4ff3-a6af-783a0b72c4fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../llm-filter/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/api/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/api/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/web/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/web/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/feed/cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/cache.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/feed/fetcher.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/fetcher.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/feed/filter.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/filter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/feed/http/handler/news.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/http/handler/news.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/feed/http/helpers/parse_duration.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="20" />
+    <option name="cachedIndexableFilesCount" value="22" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -29,6 +40,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ClemilsonAzevedo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ClemilsonAzevedo/look-news.git&quot;,
+    &quot;accountId&quot;: &quot;d111ae37-6afb-43cc-89b3-ef646c33c322&quot;
+  }
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -39,62 +62,65 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.00000000000355" />
-      <entry key="S2" value="1.001730057270027" />
-      <entry key="S5" value="1.1523868875110637" />
-      <entry key="S10" value="1.8532881027943775" />
-      <entry key="S30" value="5.407886570324201" />
-      <entry key="S60" value="10.368743341436208" />
-      <entry key="M2" value="17.176671561573052" />
-      <entry key="M5" value="25.273992059500834" />
-      <entry key="M10" value="29.196955027241046" />
-      <entry key="M15" value="30.68999634764238" />
-      <entry key="M30" value="32.28819406222396" />
-      <entry key="H1" value="33.129370626470056" />
-      <entry key="H2" value="33.5998592133065" />
-      <entry key="H4" value="35.277318449514006" />
-      <entry key="D1" value="334.5321501157795" />
-      <entry key="W1" value="1630.8330734208985" />
-    </decayedCancelled>
-    <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="9.742889726822105E-180" />
-      <entry key="M5" value="5.777794953520052E-72" />
-      <entry key="M10" value="6.305186598058146E-36" />
-      <entry key="M15" value="6.996683140365776E-24" />
-      <entry key="M30" value="8.954227876249441E-12" />
-      <entry key="H1" value="1.166659975141213E-5" />
-      <entry key="H2" value="0.014151404170594455" />
-      <entry key="H4" value="0.5340834679153676" />
-      <entry key="D1" value="86.66585143374871" />
-      <entry key="W1" value="346.0669127103668" />
+      <entry key="S5" value="7.146969790817299E-198" />
+      <entry key="S10" value="5.33428588513985E-99" />
+      <entry key="S30" value="4.405570228185531E-33" />
+      <entry key="S60" value="1.381620240891567E-16" />
+      <entry key="M2" value="2.877756740361568E-8" />
+      <entry key="M5" value="0.003506072171368525" />
+      <entry key="M10" value="0.1886235853148889" />
+      <entry key="M15" value="0.7597175310309203" />
+      <entry key="M30" value="3.60712080326411" />
+      <entry key="H1" value="10.691007354887939" />
+      <entry key="H2" value="33.334401570707904" />
+      <entry key="H4" value="83.00789972639926" />
+      <entry key="D1" value="259.2637688799606" />
+      <entry key="W1" value="1365.988517007221" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0" />
+      <entry key="M10" value="1.0000000013096395" />
+      <entry key="M15" value="1.0000032210180059" />
+      <entry key="M30" value="1.0128986126973523" />
+      <entry key="H1" value="2.058642009289507" />
+      <entry key="H2" value="11.535248576589105" />
+      <entry key="H4" value="36.76727737830297" />
+      <entry key="D1" value="128.4256079035801" />
+      <entry key="W1" value="443.0161716322406" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9201876506248751" />
-      <entry key="MS500" value="0.9835020740297591" />
-      <entry key="S2" value="0.9975751180678869" />
-      <entry key="S5" value="1.150562269120339" />
-      <entry key="S10" value="1.8518717111689291" />
-      <entry key="S30" value="5.401673586271659" />
-      <entry key="S60" value="10.354759905541023" />
-      <entry key="M2" value="17.159918260379012" />
-      <entry key="M5" value="25.262292075310548" />
-      <entry key="M10" value="29.189875110690263" />
-      <entry key="M15" value="30.68496369850717" />
-      <entry key="M30" value="32.2855103086614" />
-      <entry key="H1" value="33.12799634508117" />
-      <entry key="H2" value="33.6133003837069" />
-      <entry key="H4" value="35.81093343981002" />
-      <entry key="D1" value="421.19472652434536" />
-      <entry key="W1" value="1976.898090274884" />
+      <entry key="MS100" value="3.381614912380187E-4" />
+      <entry key="MS500" value="0.20222033709043477" />
+      <entry key="S2" value="0.6705886638423557" />
+      <entry key="S5" value="0.8522803646121506" />
+      <entry key="S10" value="0.9231903187383145" />
+      <entry key="S30" value="0.9737117568732713" />
+      <entry key="S60" value="0.9867683400237726" />
+      <entry key="M2" value="0.9933621681911174" />
+      <entry key="M5" value="1.0008455389609634" />
+      <entry key="M10" value="1.1872902204125744" />
+      <entry key="M15" value="1.758826662391109" />
+      <entry key="M30" value="4.619538240110704" />
+      <entry key="H1" value="12.74859060923846" />
+      <entry key="H2" value="44.865389754247786" />
+      <entry key="H4" value="119.76763309761115" />
+      <entry key="D1" value="387.6806433176511" />
+      <entry key="W1" value="1809.0011428475188" />
     </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -106,16 +132,23 @@
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "DefaultGoTemplateProperty": "Go File",
+    "Go Build.go build api/.executor": "Run",
     "Go Build.go build cmd/.executor": "Profiler#5",
     "Go Build.go build github.com/clemilsonazevedo/look-news/cmd/web.executor": "Run",
     "Go Build.go build main.go.executor": "Run",
     "Makefile Target.hello.executor": "Run",
+    "Makefile Target.run (1).executor": "Run",
     "Makefile Target.run.executor": "Run",
+    "Makefile Target.setup-filtro.executor": "Run",
+    "Makefile Target.test-filtro.executor": "Run",
     "Makefile Target.tidy.executor": "Run",
     "Makefile Target.vet.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -124,10 +157,12 @@
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.go.analysis.ui.options.defaults": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
@@ -138,7 +173,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
@@ -161,8 +196,9 @@
         <entry key="GoApplicationRunConfiguration">
           <value>
             <map>
+              <entry key="go build api/" value="STOPPED" />
               <entry key="go build cmd/" value="FAILED" />
-              <entry key="go build github.com/clemilsonazevedo/look-news/cmd/web" value="STOPPED" />
+              <entry key="go build github.com/clemilsonazevedo/look-news/cmd/web" value="FAILED" />
             </map>
           </value>
         </entry>
@@ -204,16 +240,14 @@
       <auto_managed_config_id value="$PROJECT_DIR$/internal/RSS" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="api" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/cmd/main.go" />
+    <configuration name="fmt" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="fmt" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
       <method v="2" />
     </configuration>
-    <configuration name="hello" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="hello" workingDirectory="" arguments="">
+    <configuration name="run (1)" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="run" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
@@ -224,33 +258,33 @@
       </makefile>
       <method v="2" />
     </configuration>
+    <configuration name="test-filtro" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="test-filtro" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
     <configuration name="tidy" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/Makefile" target="tidy" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
     </configuration>
-    <configuration name="vet" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="vet" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Makefile Target.run" />
         <item itemvalue="Makefile Target.tidy" />
-        <item itemvalue="Makefile Target.vet" />
-        <item itemvalue="Makefile Target.hello" />
-        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Makefile Target.fmt" />
+        <item itemvalue="Makefile Target.run" />
+        <item itemvalue="Makefile Target.test-filtro" />
+        <item itemvalue="Makefile Target.run (1)" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-gosdk-72a9cf600ed8-3dd3895e5e08-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-261.25134.147" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-GO-261.25134.147" />
+        <option value="bundled-gosdk-72a9cf600ed8-3dd3895e5e08-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-261.26222.72" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-GO-261.26222.72" />
       </set>
     </attachedChunks>
   </component>
@@ -266,6 +300,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VgoModernizerVersionTracker">
     <upgrades>
