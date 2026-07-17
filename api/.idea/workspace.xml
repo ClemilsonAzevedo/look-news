@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="348b6d45-cf02-4ff3-a6af-783a0b72c4fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../llm-filter/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/api/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/api/api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/web/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/web/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/feed/cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/cache.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/feed/fetcher.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/fetcher.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/feed/filter.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/filter.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/feed/http/handler/news.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/http/handler/news.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/feed/http/helpers/parse_duration.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,65 +51,65 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="7.146969790817299E-198" />
-      <entry key="S10" value="5.33428588513985E-99" />
-      <entry key="S30" value="4.405570228185531E-33" />
-      <entry key="S60" value="1.381620240891567E-16" />
-      <entry key="M2" value="2.877756740361568E-8" />
-      <entry key="M5" value="0.003506072171368525" />
-      <entry key="M10" value="0.1886235853148889" />
-      <entry key="M15" value="0.7597175310309203" />
-      <entry key="M30" value="3.60712080326411" />
-      <entry key="H1" value="10.691007354887939" />
-      <entry key="H2" value="33.334401570707904" />
-      <entry key="H4" value="83.00789972639926" />
-      <entry key="D1" value="259.2637688799606" />
-      <entry key="W1" value="1365.988517007221" />
+      <entry key="MS100" value="1.0025420348880492" />
+      <entry key="MS500" value="1.364029666423669" />
+      <entry key="S2" value="2.8017245565085247" />
+      <entry key="S5" value="4.662701239306049" />
+      <entry key="S10" value="6.195736660610852" />
+      <entry key="S30" value="7.860302469461573" />
+      <entry key="S60" value="8.398955906178724" />
+      <entry key="M2" value="8.691180257833025" />
+      <entry key="M5" value="8.87503388045636" />
+      <entry key="M10" value="9.016242494952989" />
+      <entry key="M15" value="9.384485823930829" />
+      <entry key="M30" value="11.682054653349303" />
+      <entry key="H1" value="18.244413917836674" />
+      <entry key="H2" value="40.00967260042083" />
+      <entry key="H4" value="89.06530627866968" />
+      <entry key="D1" value="266.7098206951289" />
+      <entry key="W1" value="1373.8161548685002" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.0" />
-      <entry key="M2" value="1.0" />
-      <entry key="M5" value="1.0" />
-      <entry key="M10" value="1.0000000013096395" />
-      <entry key="M15" value="1.0000032210180059" />
-      <entry key="M30" value="1.0128986126973523" />
-      <entry key="H1" value="2.058642009289507" />
-      <entry key="H2" value="11.535248576589105" />
-      <entry key="H4" value="36.76727737830297" />
-      <entry key="D1" value="128.4256079035801" />
-      <entry key="W1" value="443.0161716322406" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.7494176109560003E-113" />
+      <entry key="S5" value="7.891460693022225E-46" />
+      <entry key="S10" value="2.809174379247794E-23" />
+      <entry key="S30" value="3.0399018822382785E-8" />
+      <entry key="S60" value="1.7435314399913404E-4" />
+      <entry key="M2" value="0.013204285062021875" />
+      <entry key="M5" value="0.17712748517113353" />
+      <entry key="M10" value="0.4208651632471851" />
+      <entry key="M15" value="0.5616038172805451" />
+      <entry key="M30" value="0.7590673343202822" />
+      <entry key="H1" value="1.782124307821237" />
+      <entry key="H2" value="10.73261471791176" />
+      <entry key="H4" value="35.46506517179598" />
+      <entry key="D1" value="127.65608227323095" />
+      <entry key="W1" value="442.6359726230494" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.381614912380187E-4" />
-      <entry key="MS500" value="0.20222033709043477" />
-      <entry key="S2" value="0.6705886638423557" />
-      <entry key="S5" value="0.8522803646121506" />
-      <entry key="S10" value="0.9231903187383145" />
-      <entry key="S30" value="0.9737117568732713" />
-      <entry key="S60" value="0.9867683400237726" />
-      <entry key="M2" value="0.9933621681911174" />
-      <entry key="M5" value="1.0008455389609634" />
-      <entry key="M10" value="1.1872902204125744" />
-      <entry key="M15" value="1.758826662391109" />
-      <entry key="M30" value="4.619538240110704" />
-      <entry key="H1" value="12.74859060923846" />
-      <entry key="H2" value="44.865389754247786" />
-      <entry key="H4" value="119.76763309761115" />
-      <entry key="D1" value="387.6806433176511" />
-      <entry key="W1" value="1809.0011428475188" />
+      <entry key="MS100" value="0.9751103936215952" />
+      <entry key="MS500" value="1.356050072564591" />
+      <entry key="S2" value="2.7894026558827827" />
+      <entry key="S5" value="4.64175789077849" />
+      <entry key="S10" value="6.177748777350085" />
+      <entry key="S30" value="7.851622652667259" />
+      <entry key="S60" value="8.394363056075635" />
+      <entry key="M2" value="8.701800202973251" />
+      <entry key="M5" value="9.050662930689482" />
+      <entry key="M10" value="9.436028056102694" />
+      <entry key="M15" value="9.945240812069724" />
+      <entry key="M30" value="12.440587497172514" />
+      <entry key="H1" value="20.02553459855286" />
+      <entry key="H2" value="50.73827979120129" />
+      <entry key="H4" value="124.52307283799148" />
+      <entry key="D1" value="394.357218199384" />
+      <entry key="W1" value="1816.4485842234574" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="AISelfReview" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -144,6 +133,7 @@
     "Go Build.go build cmd/.executor": "Profiler#5",
     "Go Build.go build github.com/clemilsonazevedo/look-news/cmd/web.executor": "Run",
     "Go Build.go build main.go.executor": "Run",
+    "Makefile Target.fmt.executor": "Run",
     "Makefile Target.hello.executor": "Run",
     "Makefile Target.run (1).executor": "Run",
     "Makefile Target.run.executor": "Run",
@@ -311,6 +301,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="apply filtering with local LLM" />
+    <option name="LAST_COMMIT_MESSAGE" value="apply filtering with local LLM" />
   </component>
   <component name="VgoModernizerVersionTracker">
     <upgrades>
