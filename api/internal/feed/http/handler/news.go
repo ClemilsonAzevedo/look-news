@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"encoding/json"
 	"net/http"
 	"strconv"
 
@@ -10,9 +11,18 @@ import (
 
 func NewsHandler(cache *feed.Cache) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+		if r.Body != nil && r.ContentLength > 0 {
+			var urls []string
+			if err := json.NewDecoder(r.Body).Decode(&urls); err != nil {
+				http.Error(w, "body deve ser um array JSON de URLs: [\"url1\", \"url2\"]", http.StatusBadRequest)
+				return
+			}
+			if len(urls) > 0 {
+				cache.SetURLs(urls)
+			}
+		}
 
 		arts := cache.Articles()
-
 		total := len(arts)
 		w.Header().Set("X-Total-Count", strconv.Itoa(total))
 

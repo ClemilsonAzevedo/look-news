@@ -20,9 +20,8 @@ type Cache struct {
 	refreshing int32
 }
 
-func NewCache(urls []string, ttl, interval time.Duration, filter *Filter) (*Cache, error) {
+func NewCache(ttl, interval time.Duration, filter *Filter) (*Cache, error) {
 	return &Cache{
-		urls:     urls,
 		ttl:      ttl,
 		interval: interval,
 		filter:   filter,
@@ -31,8 +30,6 @@ func NewCache(urls []string, ttl, interval time.Duration, filter *Filter) (*Cach
 }
 
 func (c *Cache) Start(ctx context.Context) {
-	go c.refresh()
-
 	go func() {
 		ticker := time.NewTicker(c.interval)
 		defer ticker.Stop()
@@ -74,9 +71,18 @@ func (c *Cache) refresh() {
 	}
 	defer atomic.StoreInt32(&c.refreshing, 0)
 
-	fmt.Printf("[articleKey %s] refresh -> %d fontes\n", time.Now().Format("15:04:05"), len(c.urls))
+	c.mu.RLock()
+	urls := make([]string, len(c.urls))
+	copy(urls, c.urls)
+	c.mu.RUnlock()
 
-	results := FetchFromURLs(c.urls)
+	if len(urls) == 0 {
+		return
+	}
+
+	fmt.Printf("[articleKey %s] refresh -> %d fontes\n", time.Now().Format("15:04:05"), len(urls))
+
+	results := FetchFromURLs(urls)
 	totalAdded := 0
 
 	for _, r := range results {
@@ -148,6 +154,13 @@ func (c *Cache) prune() {
 		c.articles = fresh
 		c.seen = newSeen
 	}
+}
+
+func (c *Cache) SetURLs(urls []string) {
+	c.mu.Lock()
+	c.urls = urls
+	c.mu.Unlock()
+	go c.refresh()
 }
 
 func articleKey(a Article) string {

@@ -15,15 +15,17 @@ import (
 	"github.com/clemilsonazevedo/look-news/internal/feed/http/middlawares"
 )
 
-func InitServer(feedURLs []string) error {
+func InitServer() error {
 	f, err := feed.Start(
 		os.Getenv("FILTRO_PYTHON"),
 		os.Getenv("FILTRO_SCRIPT"),
 		os.Getenv("FILTRO_QUERY"),
 	)
+
 	if err != nil {
 		return fmt.Errorf("subindo o filtro: %w", err)
 	}
+
 	defer func(f *feed.Filter) {
 		err := f.Close()
 		if err != nil {
@@ -31,7 +33,7 @@ func InitServer(feedURLs []string) error {
 		}
 	}(f)
 
-	cache, err := feed.NewCache(feedURLs, 24*time.Hour, 1*time.Hour, f)
+	cache, err := feed.NewCache(24*time.Hour, 1*time.Hour, f)
 	if err != nil {
 		return err
 	}
