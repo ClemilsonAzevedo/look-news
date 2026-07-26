@@ -2,6 +2,7 @@ package handler
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"strconv"
 
@@ -11,13 +12,12 @@ import (
 
 func NewsHandler(cache *feed.Cache) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		if r.Body != nil && r.ContentLength > 0 {
+		if r.Method == http.MethodPost {
 			var urls []string
 			if err := json.NewDecoder(r.Body).Decode(&urls); err != nil {
-				http.Error(w, "body deve ser um array JSON de URLs: [\"url1\", \"url2\"]", http.StatusBadRequest)
-				return
-			}
-			if len(urls) > 0 {
+				fmt.Println("[news] body inválido ou vazio:", err)
+			} else if len(urls) > 0 {
+				fmt.Printf("[news] recebidas %d fontes\n", len(urls))
 				cache.SetURLs(urls)
 			}
 		}

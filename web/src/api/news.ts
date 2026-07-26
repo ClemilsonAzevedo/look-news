@@ -29,10 +29,19 @@ function buildQuery(query: NewsQuery): string {
 }
 
 export async function fetchNews(
-  query: NewsQuery = {},
-  signal?: AbortSignal,
+    sources: string[] = [],
+    query: NewsQuery = {},
+    signal?: AbortSignal,
 ): Promise<NewsResult> {
-  const res = await fetch(`${BASE_URL}/news${buildQuery(query)}`, { signal })
+  const res = await fetch(`${BASE_URL}/news${buildQuery(query)}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(sources),
+    signal,
+  })
+
   if (!res.ok) {
     throw new Error(`Failed to load news (${res.status})`)
   }
@@ -41,13 +50,8 @@ export async function fetchNews(
   const totalHeader = res.headers.get("X-Total-Count")
   const total = totalHeader ? Number(totalHeader) : articles.length
 
-  return { articles, total: Number.isNaN(total) ? articles.length : total }
+  return {
+    articles,
+    total: Number.isNaN(total) ? articles.length : total,
+  }
 }
-
-// export async function fetchHealth(signal?: AbortSignal): Promise<Health> {
-//   const res = await fetch(`${BASE_URL}/health`, { signal })
-//   if (!res.ok) {
-//     throw new Error(`Health check failed (${res.status})`)
-//   }
-//   return (await res.json()) as Health
-// }

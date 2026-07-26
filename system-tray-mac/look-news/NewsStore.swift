@@ -16,7 +16,7 @@ final class NewsStore: ObservableObject {
         startPolling()
     }
     
-    func startPolling(interval: TimeInterval = 60 * 60 * 1) { // 1 hora
+    func startPolling(interval: TimeInterval = 60 * 3) { // 3 minutos
         pollingTask?.cancel()
         
         pollingTask = Task {

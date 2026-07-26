@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { fetchNews, type NewsQuery } from "../api/news"
 import type { Article } from "../types/article"
 
@@ -12,36 +12,50 @@ export interface UseNewsResult {
   refetch: () => void
 }
 
-export function useNews(query: NewsQuery): UseNewsResult {
+export function useNews(
+    sources: string[] = [],
+    query: NewsQuery = {},
+): UseNewsResult {
   const [articles, setArticles] = useState<Article[]>([])
   const [total, setTotal] = useState(0)
   const [status, setStatus] = useState<FetchStatus>("loading")
   const [error, setError] = useState<string | null>(null)
-  const [reloadToken, setReloadToken] = useState(0)
 
-  const refetch = useCallback(() => setReloadToken((n) => n + 1), [])
+  const sourcesRef = useRef(sources)
+  const queryRef = useRef(query)
 
-  const queryKey = JSON.stringify(query)
+  sourcesRef.current = sources
+  queryRef.current = query
 
-  useEffect(() => {
-    const controller = new AbortController()
+  const load = useCallback(async (signal?: AbortSignal) => {
     setStatus("loading")
     setError(null)
 
-    fetchNews(JSON.parse(queryKey) as NewsQuery, controller.signal)
-      .then((result) => {
-        setArticles(result.articles)
-        setTotal(result.total)
-        setStatus("success")
-      })
-      .catch((err: unknown) => {
-        if (controller.signal.aborted) return
-        setError(err instanceof Error ? err.message : "Unknown error")
-        setStatus("error")
-      })
+    try {
+      const result = await fetchNews(
+          sourcesRef.current,
+          queryRef.current,
+          signal,
+      )
+      setArticles(result.articles)
+      setTotal(result.total)
+      setStatus("success")
+    } catch (err: unknown) {
+      if (signal?.aborted) return
+      setError(err instanceof Error ? err.message : "Unknown error")
+      setStatus("error")
+    }
+  }, [])
 
+  const refetch = useCallback(() => {
+    load()
+  }, [load])
+
+  useEffect(() => {
+    const controller = new AbortController()
+    load(controller.signal)
     return () => controller.abort()
-  }, [queryKey, reloadToken])
+  }, [JSON.stringify(sources), JSON.stringify(query), load])
 
   return { articles, total, status, error, refetch }
 }
