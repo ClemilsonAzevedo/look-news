@@ -6,7 +6,7 @@ FILTRO_DIR=../llm-filter
 FILTRO_VENV=$(FILTRO_DIR)/.venv
 FILTRO_PYTHON=$(FILTRO_VENV)/bin/python3
 FILTRO_SCRIPT=$(FILTRO_DIR)/main.py
-FILTRO_QUERY = News and relevant updates about technology, world affairs, and Angola. Focus on factual journalism, innovations, geopolitics, economy, science, and local developments in Angola. Strictly exclude ads, sponsored content, press releases, product promotions, affiliate marketing, clickbait, and low-quality SEO articles.
+FILTRO_QUERY = High-quality factual journalism and news updates strictly about technology, world affairs, geopolitics, global economy, science, engineering breakthroughs and local developments in Angola, with strong priority to new open-source/research projects, tech product launches, AI, machine learning, robotics, space, astronomy and other deep-tech/nerd topics; immediately reject every form of advertisement, sponsored content, press release, product promotion, affiliate marketing, coupon/deal roundups, clickbait and low-quality SEO articles.
 
 .DEFAULT_GOAL := help
 

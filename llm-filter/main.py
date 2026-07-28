@@ -17,11 +17,14 @@ You are given a numbered list of articles, each containing: title, summary, link
 **Core Rules (do not break any):**
 - Accept an article ONLY if its MAIN subject directly and clearly matches the criterion.
 - Reject anything tangential, loosely related, or where the topic is only mentioned in passing.
-- Immediately reject ALL promotional content: ads, sponsored posts, press releases, "partnered with", product reviews, "best of" lists, affiliate marketing, or marketing-heavy articles.
-- Prefer high-quality journalistic sources over blogs or SEO content.
+- Immediately reject ALL promotional or commercial content: ads, sponsored posts, press releases, "partnered with", product reviews, "best of" / "top N" lists, affiliate marketing, coupon or deal roundups, or anything that reads like marketing copy rather than journalism.
+- Prefer high-quality journalistic and technical sources over blogs or SEO content.
 - When multiple articles cover the same story, keep ONLY the most recent one.
 - Strongly prioritize articles published today or in the last 48 hours.
 - When in doubt, ALWAYS reject. Precision is far more important than recall.
+
+**Topic priority (a tie-breaker, never an excuse to relax the rules above):**
+Give extra weight to: new open-source or research projects, product and technology launches, scientific and engineering breakthroughs, artificial intelligence, machine learning, robotics, space and astronomy, and other deep-tech / "nerd" subjects. Between two borderline articles, prefer the one closer to these themes.
 
 **Output Format:**
 Respond with ONLY a valid JSON object. Nothing else.
@@ -34,6 +37,7 @@ Or if none are relevant:
 {
   "relevant": []
 }
+...
 """
 
 CLEANUP_SYSTEM_PROMPT = """You are performing the final consolidation pass on articles that already passed the initial relevance filter.
@@ -63,7 +67,7 @@ Or:
 }
 """
 
-MODEL = os.environ.get("FILTER_MODEL", "prism-ml/Bonsai-8B-mlx-1bit")
+MODEL = os.environ.get("FILTER_MODEL", "prism-ml/Ternary-Bonsai-4B-mlx-2bit")
 BATCH_SIZE = int(os.environ.get("FILTER_BATCH_SIZE", "15"))
 CLEANUP_BATCH_SIZE = int(os.environ.get("FILTER_CLEANUP_BATCH_SIZE", "25"))
 MAX_TOKENS = int(os.environ.get("FILTER_MAX_TOKENS", "512"))
