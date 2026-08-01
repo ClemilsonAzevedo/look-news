@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8bfb57c1-7fa0-4790-a015-e41332d11059" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../api/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/api.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/go.imports.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../system-tray-mac/look-news.xcodeproj/project.xcworkspace/xcuserdata/clema.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../system-tray-mac/look-news.xcodeproj/project.xcworkspace/xcuserdata/clema.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/.oxlintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/CLAUDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/DESIGN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/bun.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/public/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/api/news.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/ArticleCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/BottomNavBar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/FeedHeader.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/Icon.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/LoadMoreButton.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/SourcesModal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/hooks/useNews.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/hooks/useSources.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/lib/format.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/types/article.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/types/feed.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/vite.config.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ClemilsonAzevedo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ClemilsonAzevedo/look-news.git&quot;,
+    &quot;accountId&quot;: &quot;a06d2d0a-a6c8-42a4-9097-5f65a6ea5466&quot;
+  }
+}</component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0001371459842567" />
+      <entry key="S2" value="1.1082170706899572" />
+      <entry key="S5" value="1.4108831292025328" />
+      <entry key="S10" value="1.6410016608422577" />
+      <entry key="S30" value="1.8622237660239285" />
+      <entry key="S60" value="1.9299290211030335" />
+      <entry key="M2" value="2.043002738561199" />
+      <entry key="M5" value="2.950538670562577" />
+      <entry key="M10" value="4.542137680682458" />
+      <entry key="M15" value="6.081488460653456" />
+      <entry key="M30" value="11.918392593648978" />
+      <entry key="H1" value="25.64822073054122" />
+      <entry key="H2" value="46.130925581298435" />
+      <entry key="H4" value="66.01442502573555" />
+      <entry key="D1" value="92.22879377949492" />
+      <entry key="W1" value="97.99511910763812" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="8.597499840176475E-85" />
+      <entry key="S5" value="2.926849016376441E-34" />
+      <entry key="S10" value="2.2977156229965423E-17" />
+      <entry key="S30" value="4.714290002801745E-6" />
+      <entry key="S60" value="0.004049374819847125" />
+      <entry key="M2" value="0.15291013070521037" />
+      <entry key="M5" value="1.579150380834163" />
+      <entry key="M10" value="3.6537608875530894" />
+      <entry key="M15" value="5.025787017636849" />
+      <entry key="M30" value="7.959512485454941" />
+      <entry key="H1" value="12.8336424521042" />
+      <entry key="H2" value="19.96549123782962" />
+      <entry key="H4" value="27.24426980363755" />
+      <entry key="D1" value="37.32245127752888" />
+      <entry key="W1" value="39.60091098331415" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9138314502294005" />
+      <entry key="MS500" value="0.9822731760374711" />
+      <entry key="S2" value="1.1030114910175233" />
+      <entry key="S5" value="1.408001744105389" />
+      <entry key="S10" value="1.6392573448739411" />
+      <entry key="S30" value="1.8615495859036615" />
+      <entry key="S60" value="1.93354904433788" />
+      <entry key="M2" value="2.194089454451188" />
+      <entry key="M5" value="4.52226433163427" />
+      <entry key="M10" value="8.187023514699996" />
+      <entry key="M15" value="11.098799327621332" />
+      <entry key="M30" value="19.86991506328882" />
+      <entry key="H1" value="38.473873993247544" />
+      <entry key="H2" value="66.089496349862" />
+      <entry key="H4" value="93.25381338426627" />
+      <entry key="D1" value="129.55011780108097" />
+      <entry key="W1" value="137.59585916575676" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3H7WtE9edh76hokl4jo1gKUUnE8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/clema/www/look-news/app/node_modules/typescript/lib&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/shared" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src/renderer" />
+      <recent name="$PROJECT_DIR$/src/articles" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.8665.341" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8bfb57c1-7fa0-4790-a015-e41332d11059" name="Changes" comment="" />
+      <created>1785219800860</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1785219800860</updated>
+      <workItem from="1785219802073" duration="7835000" />
+      <workItem from="1785497097739" duration="6346000" />
+      <workItem from="1785570335355" duration="10008000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

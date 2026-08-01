@@ -1,23 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdb6bddb-295f-4cf0-afaf-a985f4fa11e5" name="Changes" comment="" />
+    <list default="true" id="bdb6bddb-295f-4cf0-afaf-a985f4fa11e5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/assets/trayIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/assets/trayIcon@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/assets/trayIconTemplate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/assets/trayIconTemplate@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/forge.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/forge.env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/articles-cache.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/articles-poller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/ipc.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/renderer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/screens/about/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/screens/about/view.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/screens/articles/article-row.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/screens/articles/article-row.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/screens/articles/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/screens/articles/view.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/screens/sources/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/screens/sources/view.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/screens/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/tray.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/main/windows.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/preload.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/shared/normalize-url.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/shared/rss-validator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/shared/sanitize-text.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/shared/time-ago.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/src/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/vite.main.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/vite.preload.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/vite.renderer.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/tray/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.idea/api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tray/.idea/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.idea/go.imports.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tray/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tray/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news.xcodeproj/project.xcworkspace/xcuserdata/clema.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news.xcodeproj/project.xcworkspace/xcuserdata/clema.xcuserdatad/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news.xcodeproj/xcshareddata/xcschemes/look-news.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news.xcodeproj/xcuserdata/clema.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/Assets.xcassets/AccentColor.colorset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/Assets.xcassets/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/Models/Article.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/Models/ArticleDTO.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/NewsStore.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/Services/NewsService.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/SourcesStore.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/Theme/Color.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/Views/AboutView.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/Views/ArticleRow.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/Views/ContentView.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/Views/SourcesView.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/WindowManager.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-tray-mac/look-news/look_newsApp.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.oxlintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/CLAUDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/DESIGN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/bun.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/api/news.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/ArticleCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/BottomNavBar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/FeedHeader.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/Icon.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/LoadMoreButton.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/SourcesModal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/hooks/useNews.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/hooks/useSources.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/lib/format.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/types/article.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/types/feed.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vite.config.ts" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="EmbeddingIndexingInfo">
-    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ClemilsonAzevedo"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ClemilsonAzevedo/look-news.git",
+    "accountId": "a06d2d0a-a6c8-42a4-9097-5f65a6ea5466"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2,
-  "fromUser": false
-}]]></component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0016330230805432" />
+      <entry key="MS500" value="1.4068350937777465" />
+      <entry key="S2" value="2.6370042829432414" />
+      <entry key="S5" value="3.3250440726689705" />
+      <entry key="S10" value="3.6351424472724316" />
+      <entry key="S30" value="3.8716255509829742" />
+      <entry key="S60" value="3.934922290123725" />
+      <entry key="M2" value="3.9672348991746085" />
+      <entry key="M5" value="3.98683918934415" />
+      <entry key="M10" value="3.9934104266970016" />
+      <entry key="M15" value="3.9956049108599547" />
+      <entry key="M30" value="3.997801434557312" />
+      <entry key="H1" value="3.9989004619222053" />
+      <entry key="H2" value="3.999450167104696" />
+      <entry key="H4" value="3.999725067586083" />
+      <entry key="D1" value="3.9999541757132935" />
+      <entry key="W1" value="3.9999934536190143" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9410360463383575" />
+      <entry key="MS500" value="1.3852429742998913" />
+      <entry key="S2" value="2.600871929032577" />
+      <entry key="S5" value="3.2985269511056616" />
+      <entry key="S10" value="3.6187620684221007" />
+      <entry key="S30" value="3.865326257075828" />
+      <entry key="S60" value="3.9316572908612035" />
+      <entry key="M2" value="3.9655727200114326" />
+      <entry key="M5" value="3.986167084349675" />
+      <entry key="M10" value="3.99307315935049" />
+      <entry key="M15" value="3.995379795303428" />
+      <entry key="M30" value="3.997688741276161" />
+      <entry key="H1" value="3.9988440813733486" />
+      <entry key="H2" value="3.999421968349125" />
+      <entry key="H4" value="3.9997109660875028" />
+      <entry key="D1" value="3.9999518251689326" />
+      <entry key="W1" value="3.999993117819747" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3FWOc0iffl1Fn2bj15o9LNjuEYv" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -34,20 +211,27 @@
     "RunOnceActivity.GoLinterPluginStorageMigration": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.go.analysis.ui.options.defaults": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/clema",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-gosdk-72a9cf600ed8-3dd3895e5e08-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-261.25134.147" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-GO-261.25134.147" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.8665.341" />
       </set>
     </attachedChunks>
   </component>
@@ -58,6 +242,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1782187434086</updated>
+      <workItem from="1785580855353" duration="1039000" />
     </task>
     <servers />
   </component>
