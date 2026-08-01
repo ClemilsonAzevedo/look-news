@@ -5,43 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bfb57c1-7fa0-4790-a015-e41332d11059" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../api/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/.idea/api.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/.idea/go.imports.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../system-tray-mac/look-news.xcodeproj/project.xcworkspace/xcuserdata/clema.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../system-tray-mac/look-news.xcodeproj/project.xcworkspace/xcuserdata/clema.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/.oxlintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/CLAUDE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/DESIGN.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/bun.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/public/favicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/api/news.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/ArticleCard.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/BottomNavBar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/FeedHeader.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/Icon.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/LoadMoreButton.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/SourcesModal.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/hooks/useNews.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/hooks/useSources.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/lib/format.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/types/article.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/types/feed.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trayIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/trayIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trayIcon@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/trayIcon@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trayIconTemplate.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/trayIconTemplate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trayIconTemplate@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/trayIconTemplate@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/windows.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/windows.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,61 +45,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0001371459842567" />
-      <entry key="S2" value="1.1082170706899572" />
-      <entry key="S5" value="1.4108831292025328" />
-      <entry key="S10" value="1.6410016608422577" />
-      <entry key="S30" value="1.8622237660239285" />
-      <entry key="S60" value="1.9299290211030335" />
-      <entry key="M2" value="2.043002738561199" />
-      <entry key="M5" value="2.950538670562577" />
-      <entry key="M10" value="4.542137680682458" />
-      <entry key="M15" value="6.081488460653456" />
-      <entry key="M30" value="11.918392593648978" />
-      <entry key="H1" value="25.64822073054122" />
-      <entry key="H2" value="46.130925581298435" />
-      <entry key="H4" value="66.01442502573555" />
-      <entry key="D1" value="92.22879377949492" />
-      <entry key="W1" value="97.99511910763812" />
+      <entry key="MS100" value="0.0022280541325555145" />
+      <entry key="MS500" value="0.29487958407046283" />
+      <entry key="S2" value="0.8166220879991861" />
+      <entry key="S5" value="1.2486753980299232" />
+      <entry key="S10" value="1.543790193903175" />
+      <entry key="S30" value="1.8247006104809316" />
+      <entry key="S60" value="1.9103863794555327" />
+      <entry key="M2" value="2.0326326011798814" />
+      <entry key="M5" value="2.9445388330591196" />
+      <entry key="M10" value="4.537517175879862" />
+      <entry key="M15" value="6.077363484730956" />
+      <entry key="M30" value="11.914349880893491" />
+      <entry key="H1" value="25.643870429838252" />
+      <entry key="H2" value="46.127013186935876" />
+      <entry key="H4" value="66.01162560281693" />
+      <entry key="D1" value="92.22814192206361" />
+      <entry key="W1" value="97.99502016264724" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="8.597499840176475E-85" />
-      <entry key="S5" value="2.926849016376441E-34" />
-      <entry key="S10" value="2.2977156229965423E-17" />
-      <entry key="S30" value="4.714290002801745E-6" />
-      <entry key="S60" value="0.004049374819847125" />
-      <entry key="M2" value="0.15291013070521037" />
-      <entry key="M5" value="1.579150380834163" />
-      <entry key="M10" value="3.6537608875530894" />
-      <entry key="M15" value="5.025787017636849" />
-      <entry key="M30" value="7.959512485454941" />
-      <entry key="H1" value="12.8336424521042" />
-      <entry key="H2" value="19.96549123782962" />
-      <entry key="H4" value="27.24426980363755" />
-      <entry key="D1" value="37.32245127752888" />
-      <entry key="W1" value="39.60091098331415" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000046192987133" />
+      <entry key="S60" value="1.0040083704719487" />
+      <entry key="M2" value="1.152133969698434" />
+      <entry key="M5" value="2.575939222894409" />
+      <entry key="M10" value="4.650044087025383" />
+      <entry key="M15" value="6.022378107043086" />
+      <entry key="M30" value="8.95681262283508" />
+      <entry key="H1" value="13.831465684976079" />
+      <entry key="H2" value="20.963797951289617" />
+      <entry key="H4" value="28.243114476854664" />
+      <entry key="D1" value="38.32218748878977" />
+      <entry key="W1" value="40.60087099854948" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9138314502294005" />
-      <entry key="MS500" value="0.9822731760374711" />
-      <entry key="S2" value="1.1030114910175233" />
-      <entry key="S5" value="1.408001744105389" />
-      <entry key="S10" value="1.6392573448739411" />
-      <entry key="S30" value="1.8615495859036615" />
-      <entry key="S60" value="1.93354904433788" />
-      <entry key="M2" value="2.194089454451188" />
-      <entry key="M5" value="4.52226433163427" />
-      <entry key="M10" value="8.187023514699996" />
-      <entry key="M15" value="11.098799327621332" />
-      <entry key="M30" value="19.86991506328882" />
-      <entry key="H1" value="38.473873993247544" />
-      <entry key="H2" value="66.089496349862" />
-      <entry key="H4" value="93.25381338426627" />
-      <entry key="D1" value="129.55011780108097" />
-      <entry key="W1" value="137.59585916575676" />
+      <entry key="MS100" value="0.004264120071698329" />
+      <entry key="MS500" value="0.5844517344555923" />
+      <entry key="S2" value="1.5496653862332301" />
+      <entry key="S5" value="2.131156347426929" />
+      <entry key="S10" value="2.4829101063262" />
+      <entry key="S30" value="2.803890365693451" />
+      <entry key="S60" value="2.90384365253228" />
+      <entry key="M2" value="3.177876482326538" />
+      <entry key="M5" value="5.511034962240976" />
+      <entry key="M10" value="9.177677984190922" />
+      <entry key="M15" value="12.090592906407103" />
+      <entry key="M30" value="20.862835998627258" />
+      <entry key="H1" value="39.46717866636363" />
+      <entry key="H2" value="67.08380644522647" />
+      <entry key="H4" value="94.24981643533803" />
+      <entry key="D1" value="130.54919509504785" />
+      <entry key="W1" value="138.59571922648075" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -149,33 +119,33 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/clema/www/look-news/app/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Users/clema/www/look-news/tray/node_modules/typescript/lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/shared" />
@@ -219,6 +189,7 @@
       <workItem from="1785219802073" duration="7835000" />
       <workItem from="1785497097739" duration="6346000" />
       <workItem from="1785570335355" duration="10008000" />
+      <workItem from="1785597812736" duration="768000" />
     </task>
     <servers />
   </component>
