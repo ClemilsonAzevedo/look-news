@@ -7,6 +7,12 @@ import (
 	"time"
 )
 
+type Parser struct{}
+
+func NewParser() *Parser {
+	return &Parser{}
+}
+
 var dateLayouts = []string{
 	time.RFC3339,
 	time.RFC1123Z,
@@ -119,19 +125,19 @@ type rdfItem struct {
 	Categories  []string `xml:"handler://purl.org/dc/elements/1.1/ subject"`
 }
 
-func ParseFeed(data []byte) ([]Article, error) {
+func (p *Parser) ParseFeed(data fetchResponse) ([]Article, error) {
 	root := struct{ XMLName xml.Name }{}
-	if err := xml.Unmarshal(data, &root); err != nil {
+	if err := xml.Unmarshal(data.Body, &root); err != nil {
 		return nil, fmt.Errorf("xml inválido: %w", err)
 	}
 
 	switch root.XMLName.Local {
 	case "rss":
-		return parseRSS(data)
+		return parseRSS(data.Body)
 	case "feed":
-		return parseAtom(data)
+		return parseAtom(data.Body)
 	case "RDF":
-		return paseRDF(data)
+		return paseRDF(data.Body)
 	default:
 		return nil, fmt.Errorf("formato desconhecido: %q", root.XMLName.Local)
 	}

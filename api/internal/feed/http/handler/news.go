@@ -3,40 +3,66 @@ package handler
 import (
 	"encoding/json"
 	"fmt"
-	"net/http"
-	"strconv"
+	"log/slog"
 
 	"github.com/clemilsonazevedo/look-news/internal/feed"
-	"github.com/clemilsonazevedo/look-news/internal/feed/http/helpers"
+	"github.com/go-fuego/fuego"
 )
 
-func NewsHandler(cache *feed.Cache) http.HandlerFunc {
-	return func(w http.ResponseWriter, r *http.Request) {
-		if r.Method == http.MethodPost {
-			var urls []string
-			if err := json.NewDecoder(r.Body).Decode(&urls); err != nil {
-				fmt.Println("[news] body inválido ou vazio:", err)
-			} else if len(urls) > 0 {
-				fmt.Printf("[news] recebidas %d fontes\n", len(urls))
-				cache.SetURLs(urls)
-			}
+type NewsReq struct {
+	URLs []string `json:"urls" validate:"url,required,min=1"`
+}
+
+type NewsRes struct {
+	Articles []feed.Article `json:"articles"`
+	Total    int            `json:"total" header:"X-Total-Count"`
+}
+
+func (h *Handler) HandleNews(ctx fuego.ContextWithBody[NewsReq]) (NewsRes, error) {
+	var req NewsReq
+	var articles []feed.Article
+	var totalArticles int
+
+	if err := json.NewDecoder(ctx.Request().Body).Decode(&req); err != nil {
+		slog.Error("invalid or empty body", "error", err)
+		return NewsRes{}, fuego.BadRequestError{
+			Title: "cannot decode json",
+			Err:   err,
 		}
-
-		arts := cache.Articles()
-		total := len(arts)
-		w.Header().Set("X-Total-Count", strconv.Itoa(total))
-
-		limit := 100
-		if l := r.URL.Query().Get("limit"); l != "" {
-			if n, err := strconv.Atoi(l); err == nil && n > 0 {
-				limit = n
-			}
-		}
-
-		if len(arts) > limit {
-			arts = arts[:limit]
-		}
-
-		helpers.WriteJSON(w, arts)
 	}
+
+	if len(req.URLs) == 0 {
+		slog.Error("request body has no urls", "error", "no urls provided")
+		return NewsRes{}, fuego.BadRequestError{
+			Title: "no urls provided",
+			Err:   fmt.Errorf("no urls provided"),
+		}
+	}
+
+	fetchedContent := h.fetcher.FetchFromURLs(req.URLs)
+	if len(fetchedContent) == 0 {
+		slog.Error("no content fetched", "error", "no content fetched")
+		return NewsRes{}, fmt.Errorf("no content fetched")
+	}
+
+	for _, r := range fetchedContent {
+		if r.Err != nil {
+			return NewsRes{}, fmt.Errorf("fetch: %w", r.Err)
+		}
+
+		arts, err := h.parser.ParseFeed(r)
+		if err != nil {
+			return NewsRes{}, fmt.Errorf("parse: %w", err)
+		}
+
+		// todo: Filtrar os artigos usando a GROQ AI
+
+		articles = append(articles, arts...)
+		totalArticles = len(articles)
+	}
+
+	return NewsRes{
+		Articles: articles,
+		Total:    totalArticles,
+	}, nil
 }
