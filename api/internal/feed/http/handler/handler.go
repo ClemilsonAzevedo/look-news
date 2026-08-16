@@ -1,23 +1,16 @@
 package handler
 
 import (
-	"github.com/clemilsonazevedo/look-news/internal/feed"
 	"github.com/go-fuego/fuego"
 )
 
 type Handler struct {
-	srv     *fuego.Server
-	fetcher *feed.Fetcher
-	parser  *feed.Parser
-	filter  *feed.Filter
+	srv *fuego.Server
 }
 
-func NewHandler(srv *fuego.Server, fetcher *feed.Fetcher, parser *feed.Parser, filter *feed.Filter) *Handler {
+func NewHandler(srv *fuego.Server) *Handler {
 	return &Handler{
-		srv:     srv,
-		fetcher: fetcher,
-		parser:  parser,
-		filter:  filter,
+		srv: srv,
 	}
 }
 

@@ -2,7 +2,10 @@ module github.com/clemilsonazevedo/look-news
 
 go 1.26.5
 
-require github.com/go-fuego/fuego v0.20.0
+require (
+	github.com/go-fuego/fuego v0.20.0
+	github.com/joho/godotenv v1.5.1
+)
 
 require (
 	github.com/gabriel-vasile/mimetype v1.4.15 // indirect

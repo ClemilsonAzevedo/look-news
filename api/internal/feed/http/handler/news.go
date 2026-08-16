@@ -23,6 +23,10 @@ func (h *Handler) HandleNews(ctx fuego.ContextWithBody[NewsReq]) (NewsRes, error
 	var articles []feed.Article
 	var totalArticles int
 
+	fetcher := feed.NewFetcher()
+	parser := feed.NewParser()
+	filter := feed.NewFilter()
+
 	if err := json.NewDecoder(ctx.Request().Body).Decode(&req); err != nil {
 		slog.Error("invalid or empty body", "error", err)
 		return NewsRes{}, fuego.BadRequestError{
@@ -39,7 +43,7 @@ func (h *Handler) HandleNews(ctx fuego.ContextWithBody[NewsReq]) (NewsRes, error
 		}
 	}
 
-	fetchedContent := h.fetcher.FetchFromURLs(req.URLs)
+	fetchedContent := fetcher.FetchFromURLs(req.URLs)
 	if len(fetchedContent) == 0 {
 		slog.Error("no content fetched", "error", "no content fetched")
 		return NewsRes{}, fmt.Errorf("no content fetched")
@@ -50,14 +54,18 @@ func (h *Handler) HandleNews(ctx fuego.ContextWithBody[NewsReq]) (NewsRes, error
 			return NewsRes{}, fmt.Errorf("fetch: %w", r.Err)
 		}
 
-		arts, err := h.parser.ParseFeed(r)
+		arts, err := parser.ParseFeed(r)
 		if err != nil {
 			return NewsRes{}, fmt.Errorf("parse: %w", err)
 		}
 
-		// todo: Filtrar os artigos usando a GROQ AI
+		filteredArts, err := filter.ApplyFilter("Ciência, tecnologia, startups e investimentos", arts)
+		if err != nil {
+			return NewsRes{}, fmt.Errorf("filter: %w", err)
+		}
 
-		articles = append(articles, arts...)
+		// todo: adicionar os artigos retornados por cada fonte directo no cache e ir incrementando
+		articles = append(articles, filteredArts...)
 		totalArticles = len(articles)
 	}
 

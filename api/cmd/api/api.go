@@ -5,12 +5,16 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/clemilsonazevedo/look-news/internal/feed"
 	"github.com/clemilsonazevedo/look-news/internal/feed/http/handler"
 	"github.com/go-fuego/fuego"
+	"github.com/joho/godotenv"
 )
 
 func InitServer() error {
+	if err := godotenv.Load(); err != nil {
+		return err
+	}
+
 	srv := fuego.NewServer(
 		fuego.WithAddr("localhost:8080"),
 		fuego.WithGlobalMiddlewares(func(next http.Handler) http.Handler {
@@ -30,10 +34,7 @@ func InitServer() error {
 		}),
 	)
 
-	fetcher := feed.NewFetcher()
-	parser := feed.NewParser()
-	filter := feed.NewFilter()
-	handler.NewHandler(srv, fetcher, parser, filter).BindRoutes()
+	handler.NewHandler(srv).BindRoutes()
 
 	if err := srv.Run(); err != nil {
 		slog.Error("cannot init the server",
