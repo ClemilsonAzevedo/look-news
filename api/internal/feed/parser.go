@@ -64,7 +64,7 @@ type rssSource struct {
 }
 
 type atomFeed struct {
-	XMLName xml.Name    `xml:"handler://www.w3.org/2005/Atom Feed"`
+	XMLName xml.Name    `xml:"feed"`
 	Title   string      `xml:"title"`
 	Entries []atomEntry `xml:"entry"`
 }

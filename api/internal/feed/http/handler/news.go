@@ -1,76 +1,81 @@
 package handler
 
 import (
-	"encoding/json"
 	"fmt"
-	"log/slog"
+	"net/http"
+	"net/url"
+	"strings"
 
 	"github.com/clemilsonazevedo/look-news/internal/feed"
 	"github.com/go-fuego/fuego"
 )
 
-type NewsReq struct {
-	URLs []string `json:"urls" validate:"url,required,min=1"`
-}
+func (h *Handler) HandleNews(ctx fuego.ContextNoBody) (NewsRes, error) {
+	sources := ctx.QueryParamArr("sources")
+	criterion := strings.TrimSpace(ctx.QueryParam("criterion"))
 
-type NewsRes struct {
-	Articles []feed.Article `json:"articles"`
-	Total    int            `json:"total" header:"X-Total-Count"`
-}
+	if len(sources) == 0 {
+		return NewsRes{}, fuego.BadRequestError{
+			Title: "no sources provided",
+			Err:   fmt.Errorf("at least one source is required"),
+		}
+	}
+	if criterion == "" {
+		return NewsRes{}, fuego.BadRequestError{
+			Title: "no criterion provided",
+			Err:   fmt.Errorf("a filter criterion is required"),
+		}
+	}
+	for _, s := range sources {
+		if strings.TrimSpace(s) == "" {
+			return NewsRes{}, fuego.BadRequestError{
+				Title: "invalid source",
+				Err:   fmt.Errorf("sources cannot be empty"),
+			}
+		}
+		u, err := url.ParseRequestURI(s)
+		if err != nil || u.Host == "" {
+			return NewsRes{}, fuego.BadRequestError{
+				Title: "invalid source",
+				Err:   fmt.Errorf("invalid URL: %s", s),
+			}
+		}
+		if u.Scheme != "http" && u.Scheme != "https" {
+			return NewsRes{}, fuego.BadRequestError{
+				Title: "invalid source",
+				Err:   fmt.Errorf("unsupported URL scheme: %q", u.Scheme),
+			}
+		}
+	}
 
-func (h *Handler) HandleNews(ctx fuego.ContextWithBody[NewsReq]) (NewsRes, error) {
-	var req NewsReq
+	h.refresher.EnsureSources(sources, criterion)
+
 	var articles []feed.Article
-	var totalArticles int
+	var hashes []string
 
-	fetcher := feed.NewFetcher()
-	parser := feed.NewParser()
-	filter := feed.NewFilter()
-
-	if err := json.NewDecoder(ctx.Request().Body).Decode(&req); err != nil {
-		slog.Error("invalid or empty body", "error", err)
-		return NewsRes{}, fuego.BadRequestError{
-			Title: "cannot decode json",
-			Err:   err,
+	for _, s := range sources {
+		key := feed.CacheKey(s, criterion)
+		entry, ok := h.cache.Get(key)
+		if !ok {
+			continue
 		}
+		articles = append(articles, entry.Articles...)
+		hashes = append(hashes, entry.Hash)
 	}
 
-	if len(req.URLs) == 0 {
-		slog.Error("request body has no urls", "error", "no urls provided")
-		return NewsRes{}, fuego.BadRequestError{
-			Title: "no urls provided",
-			Err:   fmt.Errorf("no urls provided"),
-		}
+	etag := `"` + feed.CombineHashes(hashes) + `"`
+	w := ctx.Response()
+
+	if ctx.Request().Header.Get("If-None-Match") == etag {
+		w.WriteHeader(http.StatusNotModified)
+		return NewsRes{}, nil
 	}
 
-	fetchedContent := fetcher.FetchFromURLs(req.URLs)
-	if len(fetchedContent) == 0 {
-		slog.Error("no content fetched", "error", "no content fetched")
-		return NewsRes{}, fmt.Errorf("no content fetched")
-	}
-
-	for _, r := range fetchedContent {
-		if r.Err != nil {
-			return NewsRes{}, fmt.Errorf("fetch: %w", r.Err)
-		}
-
-		arts, err := parser.ParseFeed(r)
-		if err != nil {
-			return NewsRes{}, fmt.Errorf("parse: %w", err)
-		}
-
-		filteredArts, err := filter.ApplyFilter("Ciência, tecnologia, startups e investimentos", arts)
-		if err != nil {
-			return NewsRes{}, fmt.Errorf("filter: %w", err)
-		}
-
-		// todo: adicionar os artigos retornados por cada fonte directo no cache e ir incrementando
-		articles = append(articles, filteredArts...)
-		totalArticles = len(articles)
-	}
+	w.Header().Set("ETag", etag)
+	w.Header().Set("Cache-Control", "max-age=60, stale-while-revalidate=300")
 
 	return NewsRes{
 		Articles: articles,
-		Total:    totalArticles,
+		Total:    len(articles),
 	}, nil
 }
