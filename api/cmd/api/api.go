@@ -27,7 +27,6 @@ func InitServer() error {
 				w.Header().Set("Access-Control-Allow-Origin", "*")
 				w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
 				w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
-
 				w.Header().Set("Content-Type", "application/json")
 				next.ServeHTTP(w, r)
 			})
@@ -39,7 +38,6 @@ func InitServer() error {
 		}),
 	)
 
-	ctx := context.Background()
 	cache := feed.NewCache()
 	refresher := feed.NewRefresher(
 		feed.NewFetcher(),
@@ -48,19 +46,36 @@ func InitServer() error {
 		cache,
 	)
 
-	ctx, stop := signal.NotifyContext(ctx, os.Interrupt, syscall.SIGTERM)
+	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
 
 	go refresher.Start(ctx, time.Hour)
 
 	handler.NewHandler(srv, cache, refresher).BindRoutes()
 
-	if err := srv.Run(); err != nil {
-		slog.Error("cannot init the server",
-			"error", err,
-		)
+	errCh := make(chan error, 1)
+	go func() {
+		errCh <- srv.Run()
+	}()
+
+	select {
+	case <-ctx.Done():
+		slog.Info("sinal recebido, encerrando servidor")
+	case err := <-errCh:
+		if err != nil {
+			slog.Error("cannot init the server", "error", err)
+			return err
+		}
+	}
+
+	shutdownCtx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+
+	if err := srv.Shutdown(shutdownCtx); err != nil {
+		slog.Error("error shutting down server", "error", err)
 		return err
 	}
 
+	slog.Info("server shutdown successfully")
 	return nil
 }
