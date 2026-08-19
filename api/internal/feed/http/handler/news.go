@@ -2,71 +2,67 @@ package handler
 
 import (
 	"fmt"
+	"log/slog"
 	"net/http"
-	"net/url"
-	"strings"
 
 	"github.com/clemilsonazevedo/look-news/internal/feed"
 	"github.com/go-fuego/fuego"
 )
 
-func (h *Handler) HandleNews(ctx fuego.ContextNoBody) (NewsRes, error) {
-	sources := ctx.QueryParamArr("sources")
-	criterion := strings.TrimSpace(ctx.QueryParam("criterion"))
+func (h *Handler) HandleNews(c fuego.ContextNoBody) (NewsRes, error) {
+	criterion := c.QueryParam("criterion")
+	sources := c.QueryParamArr("sources")
 
 	if len(sources) == 0 {
+		slog.Error("no sources provided")
 		return NewsRes{}, fuego.BadRequestError{
 			Title: "no sources provided",
-			Err:   fmt.Errorf("at least one source is required"),
+			Err:   fmt.Errorf("no sources provided"),
 		}
 	}
-	if criterion == "" {
-		return NewsRes{}, fuego.BadRequestError{
-			Title: "no criterion provided",
-			Err:   fmt.Errorf("a filter criterion is required"),
-		}
-	}
-	for _, s := range sources {
-		if strings.TrimSpace(s) == "" {
-			return NewsRes{}, fuego.BadRequestError{
-				Title: "invalid source",
-				Err:   fmt.Errorf("sources cannot be empty"),
-			}
-		}
-		u, err := url.ParseRequestURI(s)
-		if err != nil || u.Host == "" {
-			return NewsRes{}, fuego.BadRequestError{
-				Title: "invalid source",
-				Err:   fmt.Errorf("invalid URL: %s", s),
-			}
-		}
-		if u.Scheme != "http" && u.Scheme != "https" {
-			return NewsRes{}, fuego.BadRequestError{
-				Title: "invalid source",
-				Err:   fmt.Errorf("unsupported URL scheme: %q", u.Scheme),
-			}
-		}
-	}
-
-	h.refresher.EnsureSources(sources, criterion)
 
 	var articles []feed.Article
 	var hashes []string
+	var failures []string
 
-	for _, s := range sources {
-		key := feed.CacheKey(s, criterion)
-		entry, ok := h.cache.Get(key)
-		if !ok {
-			continue
+	for _, url := range sources {
+		arts, err := h.refresher.GetOrRefresh(url, criterion)
+
+		if err != nil {
+			slog.Warn("fonte falhou, seguindo com o que tinha em cache",
+				"source", url,
+				"error", err,
+			)
+			if len(arts) == 0 {
+				failures = append(failures, url)
+			}
 		}
-		articles = append(articles, entry.Articles...)
-		hashes = append(hashes, entry.Hash)
+
+		if len(arts) > 0 {
+			articles = append(articles, arts...)
+		}
+
+		key := feed.CacheKey(url, criterion)
+		if entry, ok := h.cache.Get(key); ok {
+			hashes = append(hashes, entry.Hash)
+		}
+	}
+
+	if len(failures) == len(sources) {
+		slog.Error("todas as fontes falharam sem cache disponível",
+			"fontes", failures,
+		)
+		return NewsRes{}, fuego.HTTPError{
+			Title:  "sources unavailable",
+			Detail: "não foi possível obter conteúdo de nenhuma fonte e não há cache disponível",
+			Status: http.StatusServiceUnavailable,
+		}
 	}
 
 	etag := `"` + feed.CombineHashes(hashes) + `"`
-	w := ctx.Response()
+	w := c.Response()
 
-	if ctx.Request().Header.Get("If-None-Match") == etag {
+	if c.Request().Header.Get("If-None-Match") == etag {
 		w.WriteHeader(http.StatusNotModified)
 		return NewsRes{}, nil
 	}

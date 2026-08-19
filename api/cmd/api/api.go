@@ -72,7 +72,9 @@ func InitServer() error {
 	defer cancel()
 
 	if err := srv.Shutdown(shutdownCtx); err != nil {
-		slog.Error("error shutting down server", "error", err)
+		slog.Error("error shutting down server",
+			"error", err,
+		)
 		return err
 	}
 
