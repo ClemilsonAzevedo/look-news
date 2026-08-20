@@ -16,9 +16,7 @@ import (
 )
 
 func InitServer() error {
-	if err := godotenv.Load(); err != nil {
-		return err
-	}
+	_ = godotenv.Load()
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
