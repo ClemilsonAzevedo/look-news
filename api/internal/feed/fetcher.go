@@ -7,33 +7,68 @@ import (
 	"time"
 )
 
-var httpClient = &http.Client{Timeout: 10 * time.Minute}
+type Fetcher struct{}
 
-type Result struct {
+func NewFetcher() *Fetcher {
+	return &Fetcher{}
+}
+
+type fetchResponse struct {
 	URL  string
 	Body []byte
 	Err  error
 }
 
-func FetchFromURLs(urls []string) []Result {
-	results := make([]Result, 0, len(urls))
+func (f *Fetcher) FetchFromURLs(urls []string) []fetchResponse {
+	client := http.Client{
+		Timeout: 10 * time.Second,
+	}
+	results := make([]fetchResponse, 0, len(urls))
 
 	for i, url := range urls {
-		resp, err := httpClient.Get(url)
-		if err != nil {
-			fmt.Printf("[%d/%d x %s -> %v\n]", i+1, len(urls), url, err)
-			results = append(results, Result{URL: url, Err: err})
-			continue
+		res := f.fetch(client, url)
+		if res.Err != nil {
+			res = f.fetch(client, url)
 		}
 
-		body, err := io.ReadAll(resp.Body)
-		err = resp.Body.Close()
-		if err != nil {
-			return nil
+		if res.Err != nil {
+			fmt.Printf("[%d/%d x %s -> %v\n]", i+1, len(urls), url, res.Err)
+		} else {
+			fmt.Printf("[%d/%d V %s -> success \n]", i+1, len(urls), url)
 		}
-		fmt.Printf("[%d/%d V %s -> %s \n]", i+1, len(urls), url, resp.Status)
-		results = append(results, Result{URL: url, Body: body, Err: err})
+
+		results = append(results, res)
+	}
+	return results
+}
+
+func (f *Fetcher) fetch(client http.Client, url string) fetchResponse {
+	resp, err := client.Get(url)
+	if err != nil {
+		return fetchResponse{
+			URL: url,
+			Err: err,
+		}
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode >= 400 {
+		return fetchResponse{
+			URL: url,
+			Err: fmt.Errorf("invalid status: %s", resp.Status),
+		}
 	}
 
-	return results
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return fetchResponse{
+			URL: url,
+			Err: err,
+		}
+	}
+
+	return fetchResponse{
+		URL:  url,
+		Body: body,
+	}
 }

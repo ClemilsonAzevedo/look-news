@@ -1,114 +1,89 @@
 package feed
 
 import (
-	"bufio"
 	"encoding/json"
 	"fmt"
-	"io"
-	"os"
-	"os/exec"
-	"path/filepath"
-	"sync"
+	"log/slog"
+	"strings"
 	"time"
+
+	"github.com/clemilsonazevedo/look-news/pkg/groq"
 )
 
-type req struct {
-	Query    string    `json:"query"`
-	Articles []Article `json:"articles"`
+// TODO: Arranjar um solucao para o imenso tamanho de algumas fontes
+
+type Filter struct{}
+
+func NewFilter() *Filter {
+	return &Filter{}
 }
 
-type response struct {
+type filterResponse struct {
 	Relevant []string `json:"relevant"`
 }
 
-type Filter struct {
-	cmd    *exec.Cmd
-	stdin  io.WriteCloser
-	stdout *bufio.Reader
-	query  string
-	mu     sync.Mutex
-}
+func (f *Filter) ApplyFilter(userCriterion string, articles []Article) ([]Article, error) {
+	client := groq.NewClient()
+	llmResponse := ""
 
-func Start(python, scriptPath, query string) (*Filter, error) {
-	cmd := exec.Command(python, scriptPath)
-	cmd.Dir = filepath.Dir(scriptPath)
-	cmd.Stderr = os.Stderr // Colocar os logs no terminal!!
+	today := time.Now()
+	sysPrompt := groq.SystemPrompt
+	userPrompt := buildUserPrompt(userCriterion, today, articles)
 
-	stdin, err := cmd.StdinPipe()
+	resp, err := client.ChatCompletion([]groq.Message{
+		{
+			Content: sysPrompt,
+			Role:    "system",
+		},
+		{
+			Content: userPrompt,
+			Role:    "user",
+		},
+	})
 	if err != nil {
-		return nil, err
+		slog.Error("error generating response",
+			"err", err,
+		)
+		return nil, fmt.Errorf("error filtering articles: %w", err)
 	}
 
-	stdout, err := cmd.StdoutPipe()
-	if err != nil {
-		return nil, err
+	for _, c := range resp.Choices {
+		fmt.Println(c.Message.Content)
+		llmResponse = c.Message.Content
 	}
 
-	if err := cmd.Start(); err != nil {
-		return nil, err
+	var result filterResponse
+	if err := json.Unmarshal([]byte(llmResponse), &result); err != nil {
+		slog.Error("error parsing LLM response",
+			"err", err,
+			"raw", llmResponse,
+		)
+		return nil, fmt.Errorf("error parsing filtered articles: %w", err)
 	}
 
-	return &Filter{
-		cmd:    cmd,
-		stdin:  stdin,
-		stdout: bufio.NewReader(stdout),
-		query:  query,
-	}, nil
-}
-
-func (f *Filter) ApplyFilter(arts []Article) ([]Article, error) {
-	f.mu.Lock()
-	defer f.mu.Unlock()
-
-	body, err := json.Marshal(req{Query: f.query, Articles: arts})
-	if err != nil {
-		return nil, err
+	relevantLinks := make(map[string]any, len(result.Relevant))
+	for _, link := range result.Relevant {
+		relevantLinks[link] = struct{}{}
 	}
 
-	if _, err := f.stdin.Write(append(body, '\n')); err != nil {
-		return nil, fmt.Errorf("stdin write in python: %w", err)
-	}
-
-	line, err := f.stdout.ReadBytes('\n')
-	if err != nil {
-		return nil, fmt.Errorf("stdout read in python: %w", err)
-	}
-
-	var r response
-	if err := json.Unmarshal(line, &r); err != nil {
-		return nil, fmt.Errorf("invalid response: %w", err)
-	}
-
-	relevantSet := make(map[string]struct{}, len(r.Relevant))
-	for _, link := range r.Relevant {
-		relevantSet[link] = struct{}{}
-	}
-
-	var out []Article
-	for _, article := range arts {
-		if _, ok := relevantSet[article.Link]; ok {
-			out = append(out, article)
+	filtered := make([]Article, 0, len(result.Relevant))
+	for _, a := range articles {
+		if _, ok := relevantLinks[a.Link]; ok {
+			filtered = append(filtered, a)
 		}
 	}
 
-	return out, nil
+	return filtered, nil
 }
 
-func (f *Filter) Close() error {
-	f.mu.Lock()
-	defer f.mu.Unlock()
-
-	if f.stdin != nil {
-		_ = f.stdin.Close()
+func buildUserPrompt(criterion string, today time.Time, articles []Article) string {
+	var b strings.Builder
+	fmt.Fprintf(&b, "Today's date: %s\n", today.Format("2006-01-02"))
+	fmt.Fprintf(&b, "User's interests: %s\n\n", criterion)
+	b.WriteString("Articles:\n")
+	for i, a := range articles {
+		fmt.Fprintf(&b, "%d. title: %s\n", i+1, a.Title)
+		fmt.Fprintf(&b, "   link: %s\n", a.Link)
 	}
-
-	done := make(chan error, 1)
-	go func() { done <- f.cmd.Wait() }()
-	select {
-	case err := <-done:
-		return err
-	case <-time.After(10 * time.Second):
-		_ = f.cmd.Process.Kill()
-		return fmt.Errorf("timed out waiting for process to finish")
-	}
+	return b.String()
 }

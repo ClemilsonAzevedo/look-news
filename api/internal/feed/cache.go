@@ -1,171 +1,36 @@
 package feed
 
-import (
-	"context"
-	"fmt"
-	"sync"
-	"sync/atomic"
-	"time"
-)
+import "sync"
+
+type CacheEntry struct {
+	Hash     string
+	Articles []Article
+}
 
 type Cache struct {
-	mu       sync.RWMutex
-	articles []Article
-	seen     map[string]struct{}
-	urls     []string
-	ttl      time.Duration
-	interval time.Duration
-	filter   *Filter
-
-	refreshing int32
+	mu      sync.RWMutex
+	entries map[string]CacheEntry
 }
 
-func NewCache(ttl, interval time.Duration, filter *Filter) (*Cache, error) {
-	return &Cache{
-		ttl:      ttl,
-		interval: interval,
-		filter:   filter,
-		seen:     make(map[string]struct{}),
-	}, nil
+func NewCache() *Cache {
+	return &Cache{entries: make(map[string]CacheEntry)}
 }
 
-func (c *Cache) Start(ctx context.Context) {
-	go func() {
-		ticker := time.NewTicker(c.interval)
-		defer ticker.Stop()
-		for {
-			select {
-			case <-ctx.Done():
-				return
-			case <-ticker.C:
-				c.refresh()
-			}
-		}
-	}()
-}
-
-func (c *Cache) Articles() []Article {
+func (c *Cache) Get(key string) (CacheEntry, bool) {
 	c.mu.RLock()
 	defer c.mu.RUnlock()
-	out := make([]Article, len(c.articles))
-	copy(out, c.articles)
-	return out
+	e, ok := c.entries[key]
+	return e, ok
 }
 
-func (c *Cache) Stats() (count int, newest time.Time) {
-	c.mu.RLock()
-	defer c.mu.RUnlock()
-
-	for _, a := range c.articles {
-		if a.Date.After(newest) {
-			newest = a.Date
-		}
-	}
-	return len(c.articles), newest
-}
-
-func (c *Cache) refresh() {
-	if !atomic.CompareAndSwapInt32(&c.refreshing, 0, 1) {
-		fmt.Println("[articleKey] refresh já em andamento, ignorando")
-		return
-	}
-	defer atomic.StoreInt32(&c.refreshing, 0)
-
-	c.mu.RLock()
-	urls := make([]string, len(c.urls))
-	copy(urls, c.urls)
-	c.mu.RUnlock()
-
-	if len(urls) == 0 {
-		return
-	}
-
-	fmt.Printf("[articleKey %s] refresh -> %d fontes\n", time.Now().Format("15:04:05"), len(urls))
-
-	results := FetchFromURLs(urls)
-	totalAdded := 0
-
-	for _, r := range results {
-		added, err := c.processSource(r)
-		if err != nil {
-			fmt.Printf("[articleKey] %s: %v\n", r.URL, err)
-			continue
-		}
-		totalAdded += added
-	}
-
+func (c *Cache) Set(key, hash string, articles []Article) {
 	c.mu.Lock()
-	c.prune()
-	total := len(c.articles)
-	c.mu.Unlock()
-
-	fmt.Printf("[articleKey] %d novos | total: %d artigos\n", totalAdded, total)
+	defer c.mu.Unlock()
+	c.entries[key] = CacheEntry{Hash: hash, Articles: articles}
 }
 
-func (c *Cache) processSource(r Result) (int, error) {
-	if r.Err != nil {
-		return 0, fmt.Errorf("fetch: %w", r.Err)
-	}
-
-	arts, err := ParseFeed(r.Body)
-	if err != nil {
-		return 0, fmt.Errorf("parse: %w", err)
-	}
-
-	arts, err = c.filter.ApplyFilter(arts)
-	if err != nil {
-		return 0, fmt.Errorf("filtro: %w", err)
-	}
-
-	added := 0
+func (c *Cache) Delete(key string) {
 	c.mu.Lock()
-
-	for _, a := range arts {
-		key := articleKey(a)
-		if _, exists := c.seen[key]; !exists {
-			c.seen[key] = struct{}{}
-			c.articles = append(c.articles, a)
-			added++
-		}
-	}
-	c.mu.Unlock()
-
-	fmt.Printf("[articleKey] fonte %s -> %d novos artigos relevantes\n", r.URL, added)
-	return added, nil
-}
-
-func (c *Cache) prune() {
-	cutoff := time.Now().Add(-c.ttl)
-	fresh := make([]Article, 0, len(c.articles))
-
-	for _, a := range c.articles {
-		if a.Date.IsZero() || a.Date.After(cutoff) {
-			fresh = append(fresh, a)
-		}
-	}
-
-	if pruned := len(c.articles) - len(fresh); pruned > 0 {
-		fmt.Printf("[articleKey] %d artigos expirados\n", pruned)
-		newSeen := make(map[string]struct{}, len(fresh))
-
-		for _, a := range fresh {
-			newSeen[articleKey(a)] = struct{}{}
-		}
-		c.articles = fresh
-		c.seen = newSeen
-	}
-}
-
-func (c *Cache) SetURLs(urls []string) {
-	c.mu.Lock()
-	c.urls = urls
-	c.mu.Unlock()
-	go c.refresh()
-}
-
-func articleKey(a Article) string {
-	if a.Link != "" {
-		return a.Link
-	}
-	return a.Source + "|" + a.Title + "|" + a.Published
+	defer c.mu.Unlock()
+	delete(c.entries, key)
 }
