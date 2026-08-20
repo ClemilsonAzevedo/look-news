@@ -51,7 +51,6 @@ func (c *Client) ChatCompletionContext(
 		Stream:          false,
 		Stop:            nil,
 		ReasoningFormat: "parsed",
-		// ResponseFormat:  &ResponseFormat{},
 	}
 
 	for _, option := range options {
@@ -122,47 +121,4 @@ func filterMessages(messages []Message) []Message {
 	}
 
 	return filteredMessages
-}
-
-func WithModel(model string) Option {
-	return func(body *requestBody) {
-		body.Model = model
-	}
-}
-
-func WithTemperature(temperature float64) Option {
-	return func(body *requestBody) {
-		body.Temperature = temperature
-	}
-}
-
-func WithMaxTokens(maxTokens int) Option {
-	return func(body *requestBody) {
-		body.MaxTokens = maxTokens
-	}
-}
-
-func WithTopP(topP float64) Option {
-	return func(body *requestBody) {
-		body.TopP = topP
-	}
-}
-
-func WithJSON() Option {
-	return func(body *requestBody) {
-		body.ResponseFormat.Type = "json_object"
-		body.Stream = false
-	}
-}
-
-func WithSeed(seed int) Option {
-	return func(body *requestBody) {
-		body.Seed = seed
-	}
-}
-
-func WithStop(stop string) Option {
-	return func(body *requestBody) {
-		body.Stop = &stop
-	}
 }

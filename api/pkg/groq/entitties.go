@@ -17,11 +17,11 @@ type Option func(*requestBody)
 
 type ClientOption func(*Client)
 
-func WithAPIKey(apiKey string) ClientOption {
-	return func(c *Client) {
-		c.apiKey = apiKey
-	}
-}
+// func WithAPIKey(apiKey string) ClientOption {
+// 	return func(c *Client) {
+// 		c.apiKey = apiKey
+// 	}
+// }
 
 type ResponseFormat struct {
 	Type string `json:"type,omitempty"`

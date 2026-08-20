@@ -145,21 +145,25 @@ func (r *Refresher) refreshSource(source, criterion string) ([]Article, error) {
 		return entry.Articles, nil
 	}
 
-	filtered, err := r.filter.ApplyFilter(criterion, arts)
-	if err != nil {
-		slog.Error("refresh: filter failed, will retry in next cycle",
-			"source", source,
-			"error", err,
-		)
-		return r.fallbackToCache(key), err
-	}
+	// filtered, err := r.filter.ApplyFilter(criterion, arts)
+	// if err != nil {
+	// 	slog.Error("refresh: filter failed, will retry in next cycle",
+	// 		"source", source,
+	// 		"error", err,
+	// 	)
+	// 	return r.fallbackToCache(key), err
+	// }
 
-	r.cache.Set(key, hash, filtered)
+	// r.cache.Set(key, hash, filtered)
+	r.cache.Set(key, hash, arts)
 	slog.Info("refresh: source updated",
 		"source", source,
-		"articles", len(filtered),
+		// "articles", len(filtered),
+		"articles", len(arts),
 	)
-	return filtered, nil
+
+	// return filtered, nil
+	return arts, nil
 }
 
 func (r *Refresher) fallbackToCache(key string) []Article {

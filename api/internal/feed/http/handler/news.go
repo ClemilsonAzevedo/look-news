@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"log/slog"
 	"net/http"
 
@@ -13,11 +12,31 @@ func (h *Handler) HandleNews(c fuego.ContextNoBody) (NewsRes, error) {
 	criterion := c.QueryParam("criterion")
 	sources := c.QueryParamArr("sources")
 
+	if criterion == "" {
+		slog.Error("no criterion provided")
+		return NewsRes{}, fuego.BadRequestError{
+			Title:  "Missing required param",
+			Detail: "criterion is required",
+			Errors: []fuego.ErrorItem{
+				{
+					Name:   "criterion",
+					Reason: "This query parameter is required",
+				},
+			},
+		}
+	}
+
 	if len(sources) == 0 {
 		slog.Error("no sources provided")
 		return NewsRes{}, fuego.BadRequestError{
-			Title: "no sources provided",
-			Err:   fmt.Errorf("no sources provided"),
+			Title:  "Missing required param",
+			Detail: "sources is required",
+			Errors: []fuego.ErrorItem{
+				{
+					Name:   "sources",
+					Reason: "This query parameter is required",
+				},
+			},
 		}
 	}
 
@@ -29,7 +48,7 @@ func (h *Handler) HandleNews(c fuego.ContextNoBody) (NewsRes, error) {
 		arts, err := h.refresher.GetOrRefresh(url, criterion)
 
 		if err != nil {
-			slog.Warn("fonte falhou, seguindo com o que tinha em cache",
+			slog.Warn("source failed, falling back to cache",
 				"source", url,
 				"error", err,
 			)
@@ -49,12 +68,12 @@ func (h *Handler) HandleNews(c fuego.ContextNoBody) (NewsRes, error) {
 	}
 
 	if len(failures) == len(sources) {
-		slog.Error("todas as fontes falharam sem cache disponível",
-			"fontes", failures,
+		slog.Error("all sources failed, no cache available",
+			"sources", failures,
 		)
 		return NewsRes{}, fuego.HTTPError{
 			Title:  "sources unavailable",
-			Detail: "não foi possível obter conteúdo de nenhuma fonte e não há cache disponível",
+			Detail: "all sources failed, no cache available",
 			Status: http.StatusServiceUnavailable,
 		}
 	}
