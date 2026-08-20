@@ -1,6 +1,6 @@
 module github.com/clemilsonazevedo/look-news
 
-go 1.27.0
+go 1.26.6
 
 require (
 	github.com/go-fuego/fuego v0.20.0
