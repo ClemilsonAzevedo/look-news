@@ -20,11 +20,16 @@ func InitServer() error {
 		return err
 	}
 
+	PORT := os.Getenv("PORT")
+	if PORT == "" {
+		PORT = "8080"
+	}
+
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
 
 	srv := fuego.NewServer(
-		fuego.WithAddr("localhost:8080"),
+		fuego.WithAddr(":"+PORT),
 		fuego.WithGlobalMiddlewares(
 			middlewares.Cors,
 			middlewares.RateLimit,
