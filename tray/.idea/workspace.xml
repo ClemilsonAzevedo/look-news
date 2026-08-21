@@ -5,18 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bfb57c1-7fa0-4790-a015-e41332d11059" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trayIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/trayIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trayIcon@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/trayIcon@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trayIconTemplate.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/trayIconTemplate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trayIconTemplate@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/trayIconTemplate@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/windows.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/windows.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/look-news.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../llm-filter/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../llm-filter/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../llm-filter/.idea/llm-filter.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../llm-filter/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../llm-filter/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../llm-filter/.idea/pyProjectModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../llm-filter/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../llm-filter/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../llm-filter/.python-version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../llm-filter/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../llm-filter/pyproject.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../llm-filter/uv.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="44" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,6 +58,10 @@
     &quot;accountId&quot;: &quot;a06d2d0a-a6c8-42a4-9097-5f65a6ea5466&quot;
   }
 }</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="0.0022280541325555145" />
@@ -124,6 +143,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
@@ -175,7 +195,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.8665.341" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.9437.145" />
       </set>
     </attachedChunks>
   </component>
@@ -190,6 +210,7 @@
       <workItem from="1785497097739" duration="6346000" />
       <workItem from="1785570335355" duration="10008000" />
       <workItem from="1785597812736" duration="768000" />
+      <workItem from="1787251053470" duration="2822000" />
     </task>
     <servers />
   </component>
