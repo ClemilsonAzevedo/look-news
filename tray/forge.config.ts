@@ -16,6 +16,7 @@ const config: ForgeConfig = {
     icon: './assets/icon',
     appBundleId: 'com.clemilsonazevedo.looknews',
     appCategoryType: 'public.app-category.productivity',
+    extraResource: ['./assets'],
   },
   rebuildConfig: {},
   makers: [
@@ -24,13 +25,12 @@ const config: ForgeConfig = {
       authors: 'Clemilson Azevedo',
       description: 'Agregador de noticias na sua barra de menu',
       setupExe: 'look-news.exe',
-      setupIcon: './assets/icon.png',
+      setupIcon: './assets/trayIconTemplate.png',
     }),
 
     new MakerDMG({
       name: 'Look News',
       format: 'ULFO',
-      icon: './assets/icon.png',
     }),
     new MakerZIP({}, ['darwin']),
 
@@ -43,7 +43,6 @@ const config: ForgeConfig = {
         categories: ['Utility'],
         maintainer: 'Clemilson Azevedo <clemilsondeazevedo@gmail.com>',
         homepage: 'https://github.com/clemilsonazevedo/look-news',
-        icon: './assets/icon.png',
       },
     }),
     new MakerRpm({
@@ -53,7 +52,6 @@ const config: ForgeConfig = {
         description: 'Agregador de noticias na sua barra de menu',
         categories: ['Utility'],
         homepage: 'https://github.com/clemilsonazevedo/look-news',
-        icon: './assets/icon.png',
       },
     }),
   ],
