@@ -1,6 +1,7 @@
 import type { ForgeConfig } from '@electron-forge/shared-types';
 import { MakerSquirrel } from '@electron-forge/maker-squirrel';
 import { MakerZIP } from '@electron-forge/maker-zip';
+import { MakerDMG } from '@electron-forge/maker-dmg';
 import { MakerDeb } from '@electron-forge/maker-deb';
 import { MakerRpm } from '@electron-forge/maker-rpm';
 import { VitePlugin } from '@electron-forge/plugin-vite';
@@ -10,13 +11,51 @@ import { FuseV1Options, FuseVersion } from '@electron/fuses';
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
+    name: 'Look News',
+    executableName: 'look-news',
+    icon: './assets/icon',
+    appBundleId: 'com.clemilsonazevedo.looknews',
+    appCategoryType: 'public.app-category.productivity',
   },
   rebuildConfig: {},
   makers: [
-    new MakerSquirrel({}),
+    new MakerSquirrel({
+      name: 'Look News',
+      authors: 'Clemilson Azevedo',
+      description: 'Agregador de noticias na sua barra de menu',
+      setupExe: 'look-news.exe',
+      setupIcon: './assets/icon.png',
+    }),
+
+    new MakerDMG({
+      name: 'Look News',
+      format: 'ULFO',
+      icon: './assets/icon.png',
+    }),
     new MakerZIP({}, ['darwin']),
-    new MakerRpm({}),
-    new MakerDeb({}),
+
+    new MakerDeb({
+      options: {
+        name: 'look-news',
+        productName: 'Look News',
+        genericName: 'Look News',
+        description: 'Agregador de noticias na sua barra de menu',
+        categories: ['Utility'],
+        maintainer: 'Clemilson Azevedo <clemilsondeazevedo@gmail.com>',
+        homepage: 'https://github.com/clemilsonazevedo/look-news',
+        icon: './assets/icon.png',
+      },
+    }),
+    new MakerRpm({
+      options: {
+        name: 'look-news',
+        productName: 'Look News',
+        description: 'Agregador de noticias na sua barra de menu',
+        categories: ['Utility'],
+        homepage: 'https://github.com/clemilsonazevedo/look-news',
+        icon: './assets/icon.png',
+      },
+    }),
   ],
   plugins: [
     new VitePlugin({
@@ -39,7 +78,6 @@ const config: ForgeConfig = {
         },
       ],
     }),
-
     new FusesPlugin({
       version: FuseVersion.V1,
       [FuseV1Options.RunAsNode]: false,
