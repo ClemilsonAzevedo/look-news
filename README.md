@@ -10,55 +10,93 @@
 
 ## Sumário
 
+- [Dependências](#dependências)
 - [Instalando a API](#instalando-a-api)
 - [Instalando o front (tray)](#instalando-o-front-tray)
 - [Usando a API](#usando-a-api)
 - [Documentação interativa (Swagger)](#documentação-interativa-swagger)
 - [Exemplos de chamada](#exemplos-de-chamada)
 - [Ambientes](#ambientes)
+- [Contribuindo](#contribuindo)
+
+## Dependências
+
+| Ferramenta | Pra quê | Download |
+|---|---|---|
+| Git | Clonar o repositório | [git-scm.com/downloads](https://git-scm.com/downloads) |
+| Go | Rodar a API (versão exata em `api/go.mod`) | [go.dev/dl](https://go.dev/dl/) |
+| make | Rodar os comandos do Makefile | [gnu.org/software/make](https://www.gnu.org/software/make/) |
+| Node.js + npm | Rodar o front (versão em `tray/package.json`) | [nodejs.org/en/download](https://nodejs.org/en/download) |
+| Chave de API da Groq | Filtro de relevância por IA | [console.groq.com/keys](https://console.groq.com/keys) |
+
+> `make` no macOS já vem com as Command Line Tools do Xcode. No Windows, use via WSL ou Git Bash.
 
 ## Instalando a API
 
-Clone o repositório e instale as dependências do Go:
+1. Clone o repositório e entre na pasta da API:
 
-```bash
-git clone https://github.com/clemilsonazevedo/look-news.git
-cd look-news
-cd api
-make download
-```
+   ```bash
+   git clone https://github.com/clemilsonazevedo/look-news.git
+   cd look-news/api
+   ```
 
-Crie um arquivo `.env` na raiz com sua chave da Groq:
+2. Instale as dependências:
 
-```bash
-GROQ_API_KEY=sua-chave-aqui
-```
+   ```bash
+   make download
+   ```
 
-Suba o servidor:
+3. Crie um `.env` com sua chave da Groq:
 
-```bash
-make run
-```
+   ```bash
+   GROQ_API_KEY=sua-chave-aqui
+   ```
 
-Por padrão, a API sobe em `http://localhost:8080`.
+4. Suba o servidor:
+
+   ```bash
+   make run
+   ```
+
+Pronto — a API sobe em `http://localhost:8080`.
 
 ## Instalando o front (tray)
 
-O front é um app de bandeja feito em Electron — fica rodando discretamente no sistema, buscando e mostrando as notícias sem precisar de uma janela aberta o tempo todo.
+O front é um app de bandeja em Electron: fica rodando discretamente, buscando e mostrando notícias sem precisar de janela aberta.
 
-```bash
-cd tray
-npm install
-npm start
-```
+1. Entre na pasta e instale as dependências:
 
-Isso abre o app em modo de desenvolvimento, já com o ícone na bandeja do sistema. Por padrão, ele consome a API já hospedada em produção — não precisa da API local rodando pra testar.
+   ```bash
+   cd tray
+   npm install
+   ```
 
-Se quiser apontar pro backend local em vez do hospedado, crie um `.env` dentro de `tray/`:
+2. Rode em modo de desenvolvimento:
+
+   ```bash
+   npm start
+   ```
+
+O app abre com o ícone já na bandeja do sistema. Por padrão, ele consome a API hospedada em produção — não precisa da API local rodando pra testar.
+
+Pra apontar pro backend local em vez do hospedado, crie um `.env` dentro de `tray/`:
 
 ```bash
 LOOK_NEWS_BACKEND_URL=http://localhost:8080
 ```
+
+### Gerando o executável
+
+Pra empacotar o app num instalador nativo:
+
+```bash
+cd tray
+npm run make
+```
+
+O [Electron Forge](https://www.electronforge.io/) compila e empacota o app em `tray/out/make/`.
+
+> O comando gera o instalador só pra plataforma onde ele é rodado (mac → `.dmg`, Windows → `.exe`, Linux → `.deb`/`.rpm`). Não há cross-compilação automática. Se já tinha um build antigo, rode `rm -rf out` antes pra garantir que compila do zero.
 
 ## Usando a API
 
@@ -102,7 +140,7 @@ A API suporta cache HTTP padrão via `ETag` + `Cache-Control: max-age=60, stale-
 
 ## Documentação interativa (Swagger)
 
-A API gera sua própria documentação OpenAPI automaticamente. Com o servidor rodando, acesse:
+A API gera sua própria documentação OpenAPI automaticamente:
 
 | Ambiente | Swagger UI |
 |---|---|
@@ -153,3 +191,16 @@ curl -i "http://localhost:8080/news?criterion=tecnologia"
 | Produção | `https://look-news-api.onrender.com` |
 
 > A API de produção roda no plano gratuito do Render, que "dorme" após um tempo sem uso — a primeira requisição depois disso pode demorar mais que o normal pra responder.
+
+## Contribuindo
+
+1. Faça um fork do repositório.
+2. Crie uma branch a partir da `main`: `git checkout -b feat/nome-da-feature` ou `fix/nome-do-bug`.
+3. Instale as [dependências](#dependências) e siga os passos de instalação da [API](#instalando-a-api) e do [front](#instalando-o-front-tray).
+4. Antes de abrir o PR, confirme que tudo builda:
+   - API: `go build ./...` (dentro de `api/`)
+   - Front: `npm start` ou `npm run make` (dentro de `tray/`)
+5. Abra o Pull Request descrevendo o que mudou e por quê.
+6. Mudanças grandes? Abra uma issue antes pra alinhar o approach.
+
+Bugs e sugestões também são bem-vindos na aba de Issues.
