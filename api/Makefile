@@ -4,7 +4,7 @@ BIN_DIR=bin
 
 .DEFAULT_GOAL := help
 
-.PHONY: help run build clean fmt vet tidy lint
+.PHONY: help run build clean fmt vet tidy lint download
 
 help: ## Mostra esta ajuda
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-12s\033[0m %s\n", $$1, $$2}'
@@ -27,5 +27,8 @@ vet: ## Analisa o código com go vet
 
 tidy: ## Organiza as dependências
 	go mod tidy
+
+download: ## faz download das dependências
+	go mod download
 
 lint: fmt vet ## Roda fmt e vet
