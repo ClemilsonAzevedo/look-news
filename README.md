@@ -31,14 +31,12 @@ make download
 Crie um arquivo `.env` na raiz com sua chave da Groq:
 
 ```bash
-<!-- TODO: confirmar o nome exato da variável usada para a chave da Groq -->
 GROQ_API_KEY=sua-chave-aqui
 ```
 
 Suba o servidor:
 
 ```bash
-<!-- TODO: ajustar para o comando/caminho real do entrypoint -->
 make run
 ```
 
