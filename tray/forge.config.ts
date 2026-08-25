@@ -37,6 +37,7 @@ const config: ForgeConfig = {
 
     new MakerDeb({
       options: {
+        bin: 'look-news',
         name: 'look-news',
         productName: 'Look News',
         genericName: 'Look News',
@@ -44,15 +45,18 @@ const config: ForgeConfig = {
         categories: ['Utility'],
         maintainer: 'Clemilson Azevedo <clemilsondeazevedo@gmail.com>',
         homepage: 'https://github.com/clemilsonazevedo/look-news',
+        icon: './assets/icon.png',
       },
     }),
     new MakerRpm({
       options: {
+        bin: 'look-news',
         name: 'look-news',
         productName: 'Look News',
         description: 'Agregador de noticias na sua barra de menu',
         categories: ['Utility'],
         homepage: 'https://github.com/clemilsonazevedo/look-news',
+        icon: './assets/icon.png',
       },
     }),
     new MakerAppImage({

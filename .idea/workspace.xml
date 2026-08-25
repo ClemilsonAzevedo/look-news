@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="84384528-7906-437d-a3c2-b8a417b5b903" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/tray/.github/workflows/release.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tray/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tray/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tray/forge.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tray/forge.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,32 +15,91 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="82" />
+    <option name="cachedIndexableFilesCount" value="86" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ClemilsonAzevedo"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ClemilsonAzevedo&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ClemilsonAzevedo/look-news.git",
-    "accountId": "a06d2d0a-a6c8-42a4-9097-5f65a6ea5466"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ClemilsonAzevedo/look-news.git&quot;,
+    &quot;accountId&quot;: &quot;a06d2d0a-a6c8-42a4-9097-5f65a6ea5466&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0" />
+      <entry key="M10" value="1.0" />
+      <entry key="M15" value="1.0" />
+      <entry key="M30" value="1.0" />
+      <entry key="H1" value="1.0" />
+      <entry key="H2" value="1.0" />
+      <entry key="H4" value="1.0" />
+      <entry key="D1" value="1.0" />
+      <entry key="W1" value="1.0" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.14063231058610115" />
+      <entry key="MS500" value="0.6754870422678187" />
+      <entry key="S2" value="0.9065760791543369" />
+      <entry key="S5" value="0.9615274834603511" />
+      <entry key="S10" value="0.9805750779314917" />
+      <entry key="S30" value="0.9934826423028001" />
+      <entry key="S60" value="0.9967359942847455" />
+      <entry key="M2" value="0.9983666632478999" />
+      <entry key="M5" value="0.9993463448853166" />
+      <entry key="M10" value="0.9996731190170698" />
+      <entry key="M15" value="0.999782067470635" />
+      <entry key="M30" value="0.9998910277978471" />
+      <entry key="H1" value="0.999945512414475" />
+      <entry key="H2" value="0.9999727558361153" />
+      <entry key="H4" value="0.9999863778252758" />
+      <entry key="D1" value="0.9999977296246595" />
+      <entry key="W1" value="0.9999996756603501" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="3IQ7r2VzEhMAh1SbfTI4D5O3y0A" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -60,10 +123,13 @@
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true"
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Users/clema/www/look-news/tray/node_modules/typescript/lib"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -86,6 +152,7 @@
       <option name="presentableId" value="Default" />
       <updated>1787685134080</updated>
       <workItem from="1787685135104" duration="18000" />
+      <workItem from="1787685496816" duration="1066000" />
     </task>
     <servers />
   </component>
