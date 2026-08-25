@@ -1,6 +1,6 @@
 {
-  "name": "app",
-  "productName": "app",
+  "name": "look-news",
+  "productName": "Look News",
   "version": "2026.08.25",
   "description": "Agregador de noticias na sua barra de menu",
   "main": ".vite/build/main.js",

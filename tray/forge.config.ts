@@ -12,7 +12,6 @@ import { FuseV1Options, FuseVersion } from '@electron/fuses';
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
-    name: 'Look News',
     executableName: 'look-news',
     icon: './assets/icon',
     appBundleId: 'com.clemilsonazevedo.looknews',
@@ -22,7 +21,7 @@ const config: ForgeConfig = {
   rebuildConfig: {},
   makers: [
     new MakerSquirrel({
-      name: 'Look News',
+      name: 'LookNews',
       authors: 'Clemilson Azevedo',
       description: 'Agregador de noticias na sua barra de menu',
       setupExe: 'look-news.exe',
