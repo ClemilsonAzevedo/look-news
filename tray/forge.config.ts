@@ -4,6 +4,7 @@ import { MakerZIP } from '@electron-forge/maker-zip';
 import { MakerDMG } from '@electron-forge/maker-dmg';
 import { MakerDeb } from '@electron-forge/maker-deb';
 import { MakerRpm } from '@electron-forge/maker-rpm';
+import { MakerAppImage } from '@reforged/maker-appimage';
 import { VitePlugin } from '@electron-forge/plugin-vite';
 import { FusesPlugin } from '@electron-forge/plugin-fuses';
 import { FuseV1Options, FuseVersion } from '@electron/fuses';
@@ -25,7 +26,7 @@ const config: ForgeConfig = {
       authors: 'Clemilson Azevedo',
       description: 'Agregador de noticias na sua barra de menu',
       setupExe: 'look-news.exe',
-      setupIcon: './assets/trayIconTemplate.png',
+      setupIcon: './assets/icon.ico',
     }),
 
     new MakerDMG({
@@ -54,7 +55,31 @@ const config: ForgeConfig = {
         homepage: 'https://github.com/clemilsonazevedo/look-news',
       },
     }),
+    new MakerAppImage({
+      options: {
+        name: 'look-news',
+        bin: 'look-news',
+        productName: 'Look News',
+        genericName: 'Agregador de notícias',
+        icon: './assets/icon.png',
+        categories: ['Network'],
+      },
+    }),
   ],
+
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'clemilsonazevedo',
+          name: 'look-news',
+        },
+        prerelease: false,
+      },
+    },
+  ],
+  
   plugins: [
     new VitePlugin({
       build: [
