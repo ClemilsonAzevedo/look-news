@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="84384528-7906-437d-a3c2-b8a417b5b903" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tray/forge.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tray/forge.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tray/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/tray/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="86" />
+    <option name="cachedIndexableFilesCount" value="87" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -116,6 +115,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHELLCHECK.PATH": "/Users/clema/Library/Application Support/JetBrains/WebStorm2026.2/plugins/Shell Script/shellcheck",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
@@ -152,7 +152,8 @@
       <option name="presentableId" value="Default" />
       <updated>1787685134080</updated>
       <workItem from="1787685135104" duration="18000" />
-      <workItem from="1787685496816" duration="2067000" />
+      <workItem from="1787685496816" duration="2904000" />
+      <workItem from="1787771607961" duration="313000" />
     </task>
     <servers />
   </component>
