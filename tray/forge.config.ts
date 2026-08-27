@@ -79,6 +79,8 @@ const config: ForgeConfig = {
           name: 'look-news',
         },
         prerelease: false,
+        draft: false,
+        generateReleaseNotes: true,
       },
     },
   ],

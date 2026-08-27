@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84384528-7906-437d-a3c2-b8a417b5b903" name="Changes" comment="docs: add new instalation method and reorganize">
-      <change beforePath="$PROJECT_DIR$/install.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tray/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tray/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="84384528-7906-437d-a3c2-b8a417b5b903" name="Changes" comment="enhance: improve installer scripts with progress indicators and error handling">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +154,7 @@
       <workItem from="1787685135104" duration="18000" />
       <workItem from="1787685496816" duration="2904000" />
       <workItem from="1787771607961" duration="4019000" />
-      <workItem from="1787810476258" duration="408000" />
+      <workItem from="1787810476258" duration="1168000" />
     </task>
     <task id="LOCAL-00001" summary="add scripts to install via curl">
       <option name="closed" value="true" />
@@ -173,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787775194661</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="enhance: improve installer scripts with progress indicators and error handling">
+      <option name="closed" value="true" />
+      <created>1787811188600</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1787811188600</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +189,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add scripts to install via curl" />
     <MESSAGE value="docs: add new instalation method and reorganize" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: add new instalation method and reorganize" />
+    <MESSAGE value="enhance: improve installer scripts with progress indicators and error handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="enhance: improve installer scripts with progress indicators and error handling" />
   </component>
 </project>
