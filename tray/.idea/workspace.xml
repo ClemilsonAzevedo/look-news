@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bfb57c1-7fa0-4790-a015-e41332d11059" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/windows.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/windows.ts" afterDir="false" />
-    </list>
+    <list default="true" id="8bfb57c1-7fa0-4790-a015-e41332d11059" name="Changes" comment="Make Linux windows non-transparent and set default background color support" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,61 +45,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000845991448484" />
-      <entry key="S5" value="1.0236626170452603" />
-      <entry key="S10" value="1.1714763715658176" />
-      <entry key="S30" value="1.9711968085265288" />
-      <entry key="S60" value="2.7838993143548096" />
-      <entry key="M2" value="3.5986315218895992" />
-      <entry key="M5" value="4.807492408722579" />
-      <entry key="M10" value="6.235667501940771" />
-      <entry key="M15" value="7.253483389396049" />
-      <entry key="M30" value="9.579411282219638" />
-      <entry key="H1" value="20.052727105944264" />
-      <entry key="H2" value="53.7934703973122" />
-      <entry key="H4" value="108.511111490881" />
-      <entry key="D1" value="220.4923947226409" />
-      <entry key="W1" value="252.19122929319556" />
+      <entry key="MS100" value="1.003749859952205" />
+      <entry key="MS500" value="1.5680335828405423" />
+      <entry key="S2" value="2.459906491113104" />
+      <entry key="S5" value="2.78412284749988" />
+      <entry key="S10" value="3.0386465900562496" />
+      <entry key="S30" value="3.9088753302931836" />
+      <entry key="S60" value="4.74383281626466" />
+      <entry key="M2" value="5.574151919252052" />
+      <entry key="M5" value="6.795073395443677" />
+      <entry key="M10" value="8.227911205593877" />
+      <entry key="M15" value="9.247578148850707" />
+      <entry key="M30" value="11.575619935102246" />
+      <entry key="H1" value="22.048943949708377" />
+      <entry key="H2" value="55.78853852203133" />
+      <entry key="H4" value="110.50618027366875" />
+      <entry key="D1" value="222.49073196280852" />
+      <entry key="W1" value="254.1909577511102" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="2.5851014603039176E-136" />
-      <entry key="S10" value="1.6078250714253463E-68" />
-      <entry key="S30" value="2.52394332620959E-23" />
-      <entry key="S60" value="5.023886270816237E-12" />
-      <entry key="M2" value="2.2414027462319755E-6" />
-      <entry key="M5" value="0.005498040821486486" />
-      <entry key="M10" value="0.07415159303802375" />
-      <entry key="M15" value="0.17681375096195934" />
-      <entry key="M30" value="0.45851611941190873" />
-      <entry key="H1" value="1.271857025130149" />
-      <entry key="H2" value="4.85567145618965" />
-      <entry key="H4" value="13.588452376476132" />
-      <entry key="D1" value="37.74195433918923" />
-      <entry key="W1" value="45.537232446697224" />
+      <entry key="S5" value="2.270517103894104E-136" />
+      <entry key="S10" value="1.5068235145145915E-68" />
+      <entry key="S30" value="2.4699460256442486E-23" />
+      <entry key="S60" value="4.969855154473062E-12" />
+      <entry key="M2" value="2.229317194674878E-6" />
+      <entry key="M5" value="0.005486163500515469" />
+      <entry key="M10" value="0.07407145554302201" />
+      <entry key="M15" value="0.1766863366211783" />
+      <entry key="M30" value="0.4583508832314616" />
+      <entry key="H1" value="1.2716278339141198" />
+      <entry key="H2" value="4.855233935554903" />
+      <entry key="H4" value="13.587840168433178" />
+      <entry key="D1" value="37.7416709323532" />
+      <entry key="W1" value="45.53718359766918" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9138314502294005" />
-      <entry key="MS500" value="0.9821395952633915" />
-      <entry key="S2" value="0.9955888965154004" />
-      <entry key="S5" value="1.0218196070644594" />
-      <entry key="S10" value="1.1704289445920817" />
-      <entry key="S30" value="1.970148296522832" />
-      <entry key="S60" value="2.7816784109060997" />
-      <entry key="M2" value="3.5955853255529053" />
-      <entry key="M5" value="4.807718116997743" />
-      <entry key="M10" value="6.3034041506358935" />
-      <entry key="M15" value="7.424193098577646" />
-      <entry key="M30" value="10.03333293988056" />
-      <entry key="H1" value="21.32120349621958" />
-      <entry key="H2" value="58.64580396227984" />
-      <entry key="H4" value="122.09608515373716" />
-      <entry key="D1" value="258.23297733544604" />
-      <entry key="W1" value="297.72823006384476" />
+      <entry key="MS100" value="0.9167439300681878" />
+      <entry key="MS500" value="1.523649101636993" />
+      <entry key="S2" value="2.4382478937248817" />
+      <entry key="S5" value="2.7739811917265214" />
+      <entry key="S10" value="3.0331846316528237" />
+      <entry key="S30" value="3.9063045580642353" />
+      <entry key="S60" value="4.740856876497307" />
+      <entry key="M2" value="5.570731030085063" />
+      <entry key="M5" value="6.795141769680376" />
+      <entry key="M10" value="8.295496159669515" />
+      <entry key="M15" value="9.41811250090298" />
+      <entry key="M30" value="12.029351834156842" />
+      <entry key="H1" value="23.317178667040213" />
+      <entry key="H2" value="60.64042832119898" />
+      <entry key="H4" value="124.09053861213128" />
+      <entry key="D1" value="260.2310306335487" />
+      <entry key="W1" value="299.7279095950467" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -206,11 +202,24 @@
       <workItem from="1787526368345" duration="3779000" />
       <workItem from="1787682873780" duration="2272000" />
       <workItem from="1787685175756" duration="319000" />
-      <workItem from="1787809887082" duration="339000" />
+      <workItem from="1787809887082" duration="585000" />
     </task>
+    <task id="LOCAL-00001" summary="Make Linux windows non-transparent and set default background color support">
+      <option name="closed" value="true" />
+      <created>1787810267315</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1787810267315</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Make Linux windows non-transparent and set default background color support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make Linux windows non-transparent and set default background color support" />
   </component>
 </project>
