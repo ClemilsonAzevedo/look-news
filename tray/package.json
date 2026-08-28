@@ -1,7 +1,7 @@
 {
   "name": "look-news",
   "productName": "Look News",
-  "version": "2026.08.27",
+  "version": "2026.08.28",
   "description": "Agregador de noticias na sua barra de menu",
   "main": ".vite/build/main.js",
   "private": true,
