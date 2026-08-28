@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84384528-7906-437d-a3c2-b8a417b5b903" name="Changes" comment="enhance: improve installer scripts with progress indicators and error handling">
+    <list default="true" id="84384528-7906-437d-a3c2-b8a417b5b903" name="Changes" comment="chore: bump version to 2026.08.27">
+      <change afterPath="$PROJECT_DIR$/api/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tray/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,61 +40,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000473176553397" />
-      <entry key="MS500" value="1.178213249444731" />
-      <entry key="S2" value="2.674785787376134" />
-      <entry key="S5" value="5.22939230340192" />
-      <entry key="S10" value="7.533912463790081" />
-      <entry key="S30" value="10.245360106829477" />
-      <entry key="S60" value="11.431081683230014" />
-      <entry key="M2" value="13.036674552757427" />
-      <entry key="M5" value="18.44584033099967" />
-      <entry key="M10" value="24.447753365389502" />
-      <entry key="M15" value="27.713905576491015" />
-      <entry key="M30" value="32.04682873270162" />
-      <entry key="H1" value="34.77023451151836" />
-      <entry key="H2" value="36.313296496130164" />
-      <entry key="H4" value="37.13743838490977" />
-      <entry key="D1" value="37.85345471284312" />
-      <entry key="W1" value="37.9789951516645" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000000029452925" />
+      <entry key="S5" value="1.0015026822529964" />
+      <entry key="S10" value="1.1373193177803111" />
+      <entry key="S30" value="3.978713279149467" />
+      <entry key="S60" value="7.624068035053533" />
+      <entry key="M2" value="11.559677333572823" />
+      <entry key="M5" value="18.749961916244022" />
+      <entry key="M10" value="25.642387752307975" />
+      <entry key="M15" value="29.345786800794265" />
+      <entry key="M30" value="34.25376076924547" />
+      <entry key="H1" value="37.33945234033755" />
+      <entry key="H2" value="39.088203714840084" />
+      <entry key="H4" value="40.02230128333388" />
+      <entry key="D1" value="40.833890070959214" />
+      <entry key="W1" value="40.976190807079945" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="6.488740514251386E-279" />
-      <entry key="MS500" value="2.3037326709197763E-56" />
-      <entry key="S2" value="1.2319923762258402E-14" />
-      <entry key="S5" value="2.730506458658808E-6" />
-      <entry key="S10" value="0.0016524244184406153" />
-      <entry key="S30" value="0.11822448612456028" />
-      <entry key="S60" value="0.3440899725080441" />
-      <entry key="M2" value="0.6022572353166487" />
-      <entry key="M5" value="0.99843572753919" />
-      <entry key="M10" value="1.335431739190237" />
-      <entry key="M15" value="1.506893542996599" />
-      <entry key="M30" value="1.7237174809113216" />
-      <entry key="H1" value="1.8533854643524785" />
-      <entry key="H2" value="1.9244280732549706" />
-      <entry key="H4" value="1.961628457652575" />
-      <entry key="D1" value="1.9935217097104712" />
-      <entry key="W1" value="1.9990724739069552" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="3.2071966696850292E-93" />
+      <entry key="S2" value="7.525431346116554E-24" />
+      <entry key="S5" value="5.631350502475456E-10" />
+      <entry key="S10" value="2.3730466709433786E-5" />
+      <entry key="S30" value="0.028736618349839857" />
+      <entry key="S60" value="0.16964307232450798" />
+      <entry key="M2" value="0.42287701720105897" />
+      <entry key="M5" value="0.8667481746525728" />
+      <entry key="M10" value="1.2442513056773186" />
+      <entry key="M15" value="1.4374966660491337" />
+      <entry key="M30" value="1.6835585438604175" />
+      <entry key="H1" value="1.8316682657023204" />
+      <entry key="H2" value="1.9131200267288828" />
+      <entry key="H4" value="1.9558566472622365" />
+      <entry key="D1" value="1.9925429004020339" />
+      <entry key="W1" value="1.9989322251483987" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9794666414590005" />
-      <entry key="MS500" value="1.1733202881305458" />
-      <entry key="S2" value="2.6718959887719977" />
-      <entry key="S5" value="5.227067249744042" />
-      <entry key="S10" value="7.533313494833505" />
-      <entry key="S30" value="10.347500477186527" />
-      <entry key="S60" value="11.751658558267687" />
-      <entry key="M2" value="13.617780422998681" />
-      <entry key="M5" value="19.428599251775317" />
-      <entry key="M10" value="25.77175871174319" />
-      <entry key="M15" value="29.21189574403215" />
-      <entry key="M30" value="33.7652508893864" />
-      <entry key="H1" value="36.62071092702676" />
-      <entry key="H2" value="38.23619678519838" />
-      <entry key="H4" value="39.09828351483129" />
-      <entry key="D1" value="39.846843066259396" />
-      <entry key="W1" value="39.97804850467386" />
+      <entry key="MS100" value="0.13584185781575725" />
+      <entry key="MS500" value="0.6708211124411306" />
+      <entry key="S2" value="0.9050064657445429" />
+      <entry key="S5" value="0.962352793070447" />
+      <entry key="S10" value="1.1171800865194175" />
+      <entry key="S30" value="3.994861030953451" />
+      <entry key="S60" value="7.776725275200496" />
+      <entry key="M2" value="11.964566876669432" />
+      <entry key="M5" value="19.601707365865707" />
+      <entry key="M10" value="26.87526937621833" />
+      <entry key="M15" value="30.774301603842247" />
+      <entry key="M30" value="35.93189992368913" />
+      <entry key="H1" value="39.16812111819577" />
+      <entry key="H2" value="40.999742467792565" />
+      <entry key="H4" value="41.977345623021705" />
+      <entry key="D1" value="42.826294459301174" />
+      <entry key="W1" value="42.97510316660544" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -154,7 +157,8 @@
       <workItem from="1787685135104" duration="18000" />
       <workItem from="1787685496816" duration="2904000" />
       <workItem from="1787771607961" duration="4019000" />
-      <workItem from="1787810476258" duration="1168000" />
+      <workItem from="1787810476258" duration="3102000" />
+      <workItem from="1787869441958" duration="3511000" />
     </task>
     <task id="LOCAL-00001" summary="add scripts to install via curl">
       <option name="closed" value="true" />
@@ -180,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787811188600</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="chore: bump version to 2026.08.27">
+      <option name="closed" value="true" />
+      <created>1787811921993</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1787811921993</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +202,7 @@
     <MESSAGE value="add scripts to install via curl" />
     <MESSAGE value="docs: add new instalation method and reorganize" />
     <MESSAGE value="enhance: improve installer scripts with progress indicators and error handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="enhance: improve installer scripts with progress indicators and error handling" />
+    <MESSAGE value="chore: bump version to 2026.08.27" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: bump version to 2026.08.27" />
   </component>
 </project>

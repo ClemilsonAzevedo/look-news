@@ -1,228 +1,103 @@
 <p align="center">
-  <img src="tray/assets/icon.png" alt="Look News" width="512" />
+  <img src="tray/assets/icon.png" alt="Look News" width="520" />
 </p>
 
 <h1 align="center">Look News</h1>
 
 <p align="center">
-  Agregador de notícias que acompanha várias fontes RSS/Atom/RDF, filtra por relevância usando IA e entrega tudo pronto através de uma API — consumido por um app de bandeja (tray) em Electron.
+  Agregador de notícias que acompanha várias fontes RSS/Atom/RDF, filtra por relevância usando IA e entrega tudo pronto — direto na sua bandeja do sistema.
+</p>
+
+<p align="center">
+  <a href="https://github.com/clemilsonazevedo/look-news/releases/latest">
+    <img src="https://img.shields.io/github/v/release/clemilsonazevedo/look-news" alt="Última versão">
+  </a>
 </p>
 
 ## Sumário
 
-- [Instalação rápida](#instalação-rápida-recomendado)
-- [Instalação manual](#instalação-manual)
-- [Dependências](#dependências)
-- [Instalando o front (tray)](#instalando-o-front-tray)
-- [Instalando a API](#instalando-a-api)
-- [Usando a API](#usando-a-api)
-- [Documentação interativa (Swagger)](#documentação-interativa-swagger)
-- [Exemplos de chamada](#exemplos-de-chamada)
-- [Ambientes](#ambientes)
-- [Contribuindo](#contribuindo)
+* [Instalação rápida](#instalação-rápida)
+* [Como funciona](#como-funciona)
+* [Fontes RSS para começar](#fontes-rss-para-começar)
+* [Como encontrar fontes RSS](#como-encontrar-fontes-rss)
+* [O que tem aqui](#o-que-tem-aqui)
+* [Contribuindo](#contribuindo)
+* [Licença](#licença)
 
-## Instalação rápida (recomendado)
+## Instalação rápida
 
-Baixa o binário pronto da última release — sem precisar de dependências.
+Sem precisar instalar nada além do que já vem no seu sistema — sem Git, sem Node, sem Go:
 
-1. macOS e Linux:
-```Bash
+**macOS / Linux**
+
+```bash
 curl -fsSL https://raw.githubusercontent.com/clemilsonazevedo/look-news/main/install.sh | bash
 ```
 
-2. Windows (PowerShell):
-```Bash
+**Windows** (PowerShell)
+
+```powershell
 irm https://raw.githubusercontent.com/clemilsonazevedo/look-news/main/install.ps1 | iex
 ```
-O script consulta a API do GitHub, baixa o asset correto e instala o app. 
 
-Basta executar e acompanhar a instalação.
+O script busca a última versão publicada e instala sozinho.
 
-## Instalação manual
+## Como funciona
 
-### Dependências
+Depois de instalado, o Look News roda discretamente como um ícone na bandeja do sistema — sem janela aberta ocupando espaço. Clique no ícone para ver as notícias mais recentes, já filtradas por relevância.
 
-| Ferramenta | Pra quê | Download |
-|---|---|---|
-| Git | Clonar o repositório | [git-scm.com/downloads](https://git-scm.com/downloads) |
-| Go | Rodar a API (versão exata em `api/go.mod`) | [go.dev/dl](https://go.dev/dl/) |
-| make | Rodar os comandos do Makefile | [gnu.org/software/make](https://www.gnu.org/software/make/) |
-| Node.js + npm | Rodar o front (versão em `tray/package.json`) | [nodejs.org/en/download](https://nodejs.org/en/download) |
-| Chave de API da Groq | Filtro de relevância por IA | [console.groq.com/keys](https://console.groq.com/keys) |
+<p align="center">
+  <img src="tray/assets/tray-diagram.png" alt="Onde o app aparece no macOS e no Windows" width="700" />
+</p>
 
-> `make` no macOS já vem com as Command Line Tools do Xcode. No Windows, use via WSL ou Git Bash.
+> A ilustração acima mostra só o posicionamento — não é um screenshot real da interface. Veja mais detalhes na [documentação do tray](tray/README.md#onde-encontrar-o-app).
 
-### Instalando o front (tray)
+## Fontes RSS para começar
 
-O front é um app de bandeja em Electron: fica rodando discretamente, buscando e mostrando notícias sem precisar de janela aberta.
+Você pode adicionar praticamente qualquer site que disponibilize um feed RSS, Atom ou RDF.
 
-1. Entre na pasta e instale as dependências:
+Para começar, aqui estão algumas fontes de tecnologia e programação:
 
-   ```bash
-   cd tray
-   npm install
-   ```
+| Fonte            | Feed                                      |
+| ---------------- | ----------------------------------------- |
+| **Huncoding**    | `https://huncoding.com/feed.xml`          |
+| **TabNews**      | `https://www.tabnews.com.br/recentes/rss` |
+| **Tecnoblog**    | `https://tecnoblog.net/feed/`             |
+| **TechCrunch**   | `https://techcrunch.com/feed/`            |
+| **SecurityWeek** | `https://www.securityweek.com/feed/`      |
 
-2. Rode em modo de desenvolvimento:
+Essas são apenas sugestões. O objetivo do Look News é permitir que você monte sua própria seleção de fontes de acordo com os assuntos que acompanha.
 
-   ```bash
-   npm start
-   ```
+## Como encontrar fontes RSS
 
-O app abre com o ícone já na bandeja do sistema. Por padrão, ele consome a API hospedada em produção — não precisa da API local rodando pra testar.
+Existem várias formas de encontrar feeds RSS.
 
-Pra apontar pro backend local em vez do hospedado, crie um `.env` dentro de `tray/`:
+Muitos sites já possuem um feed e indicam isso no rodapé, na página de notícias ou através de um ícone/link de RSS. Também vale procurar pela palavra `RSS` ou `feed` no próprio site.
 
-```bash
-LOOK_NEWS_BACKEND_URL=http://localhost:8080
-```
+Outra opção é usar uma IA para encontrar feeds de um determinado assunto. Por exemplo, na **Perplexity**, você pode pedir:
 
-#### Gerando o executável
+> "Encontre fontes RSS sobre desenvolvimento em Go, inteligência artificial e startups. Retorne os links diretos dos feeds RSS."
 
-Pra empacotar o app num instalador nativo:
+Você também pode fazer o mesmo com qualquer tema de interesse — tecnologia, segurança, ciência, economia, programação, notícias locais etc.
 
-```bash
-cd tray
-npm run make
-```
+Depois, basta adicionar os feeds encontrados ao Look News.
 
-O [Electron Forge](https://www.electronforge.io/) compila e empacota o app em `tray/out/make/`.
+## O que tem aqui
 
-> O comando gera o instalador só pra plataforma onde ele é rodado (mac → `.dmg`, Windows → `.exe`, Linux → `.deb`/`.rpm`). Não há cross-compilação automática. Se já tinha um build antigo, rode `rm -rf out` antes pra garantir que compila do zero.
+Este é um monorepo com duas partes, cada uma com sua própria documentação:
 
-### Instalando a API
+| Parte        | O que faz                                                                  | Documentação                       |
+| ------------ | -------------------------------------------------------------------------- | ---------------------------------- |
+| 🖥️ **Tray** | App de bandeja em Electron — o que o usuário final abre e usa no dia a dia | [`tray/README.md`](tray/README.md) |
+| ⚙️ **API**   | Backend em Go — busca, filtra por IA e serve as notícias                   | [`api/README.md`](api/README.md)   |
 
-1. Clone o repositório e entre na pasta da API:
+Só quer *usar* o app? A instalação rápida acima já é tudo que você precisa. Quer rodar ou desenvolver localmente? Entra na documentação da parte que te interessa.
 
-   ```bash
-   git clone https://github.com/clemilsonazevedo/look-news.git
-   cd look-news/api
-   ```
+## Contribuindo
 
-2. Instale as dependências:
-
-   ```bash
-   make download
-   ```
-
-3. Crie um `.env` com sua chave da Groq:
-
-   ```bash
-   GROQ_API_KEY=sua-chave-aqui
-   ```
-
-4. Suba o servidor:
-
-   ```bash
-   make run
-   ```
-
-Pronto — a API sobe em `http://localhost:8080`.
-
-
-### Usando a API
-
-#### `GET /news`
-
-| Query param | Tipo | Obrigatório |
-|---|---|---|
-| `criterion` | string — critério de relevância pro filtro | sim |
-| `sources` | array de strings — uma ou mais URLs de feed (`?sources=A&sources=B`) | sim |
-
-**Resposta — `200 OK`**
-
-```json
-{
-  "articles": [
-    {
-      "title": "string",
-      "summary": "string",
-      "link": "string",
-      "date": "2026-08-20T12:00:00Z",
-      "source": "string",
-      "author": "string",
-      "published": "string",
-      "terms": ["string"]
-    }
-  ],
-  "total": 0
-}
-```
-
-**Outros status possíveis**
-
-| Status | Quando acontece |
-|---|---|
-| `304 Not Modified` | O `ETag` enviado em `If-None-Match` bate com o atual — corpo vazio |
-| `400 Bad Request` | Nenhuma fonte (`sources`) foi enviada |
-| `429 Too Many Requests` | Limite de requisições por IP excedido (5 req/s, rajada de 15) |
-| `503 Service Unavailable` | Todas as fontes pedidas falharam e não há cache disponível |
-
-A API suporta cache HTTP padrão via `ETag` + `Cache-Control: max-age=60, stale-while-revalidate=300` — uma requisição condicional com `If-None-Match` evita baixar a resposta inteira quando nada mudou.
-
-### Documentação interativa (Swagger)
-
-A API gera sua própria documentação OpenAPI automaticamente:
-
-| Ambiente | Swagger UI |
-|---|---|
-| Local | `http://localhost:8080/swagger` |
-| Produção | `https://look-news-api.onrender.com/swagger` |
-
-Lá dá pra ver todas as rotas, parâmetros e testar chamadas direto pelo navegador.
-
-### Exemplos de chamada
-
-**Uma única fonte:**
-
-```bash
-curl "http://localhost:8080/news?criterion=tecnologia&sources=https://exemplo.com/feed.xml"
-```
-
-**Múltiplas fontes de uma vez:**
-
-```bash
-curl "http://localhost:8080/news?criterion=ciência+e+tecnologia&sources=https://exemplo.com/feed.xml&sources=https://outroexemplo.com/rss"
-```
-
-**Requisição condicional (revalida sem baixar tudo de novo):**
-
-```bash
-# primeira chamada — guarda o ETag da resposta
-curl -i "http://localhost:8080/news?criterion=tecnologia&sources=https://exemplo.com/feed.xml"
-# -> ETag: "a1b2c3..."
-
-# chamada seguinte — usa o ETag guardado
-curl -i "http://localhost:8080/news?criterion=tecnologia&sources=https://exemplo.com/feed.xml" \
-  -H 'If-None-Match: "a1b2c3..."'
-# -> 304 Not Modified, sem corpo, se nada mudou
-```
-
-**Requisição inválida (sem fontes):**
-
-```bash
-curl -i "http://localhost:8080/news?criterion=tecnologia"
-# -> 400 Bad Request
-```
-
-### Ambientes
-
-| Ambiente | URL |
-|---|---|
-| Local | `http://localhost:8080` |
-| Produção | `https://look-news-api.onrender.com` |
-
-> A API de produção roda no plano gratuito do Render, que "dorme" após um tempo sem uso — a primeira requisição depois disso pode demorar mais que o normal pra responder.
-
-### Contribuindo
-
-1. Faça um fork do repositório.
-2. Crie uma branch a partir da `main`: `git checkout -b feat/nome-da-feature` ou `fix/nome-do-bug`.
-3. Instale as [dependências](#dependências) e siga os passos de instalação da [API](#instalando-a-api) e do [front](#instalando-o-front-tray).
-4. Antes de abrir o PR, confirme que tudo builda:
-   - API: `go build ./...` (dentro de `api/`)
-   - Front: `npm start` ou `npm run make` (dentro de `tray/`)
-5. Abra o Pull Request descrevendo o que mudou e por quê.
-6. Mudanças grandes? Abra uma issue antes pra alinhar o approach.
+1. Fork → branch a partir da `main` (`feat/...` ou `fix/...`).
+2. Siga o guia de instalação da parte que você vai mexer: [tray](tray/README.md) ou [API](api/README.md).
+3. Confirme que builda antes de abrir o PR.
+4. Descreva claramente o que mudou. Mudança grande? Abre uma issue antes pra alinhar o approach.
 
 Bugs e sugestões também são bem-vindos na aba de Issues.
