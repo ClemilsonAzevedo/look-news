@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bfb57c1-7fa0-4790-a015-e41332d11059" name="Changes" comment="Make Linux windows non-transparent and set default background color support" />
+    <list default="true" id="8bfb57c1-7fa0-4790-a015-e41332d11059" name="Changes" comment="Make Windows and Linux windows non-transparent, set default background color, and update README structure">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="51" />
+    <option name="cachedIndexableFilesCount" value="50" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -45,61 +47,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.003749859952205" />
-      <entry key="MS500" value="1.5680335828405423" />
-      <entry key="S2" value="2.459906491113104" />
-      <entry key="S5" value="2.78412284749988" />
-      <entry key="S10" value="3.0386465900562496" />
-      <entry key="S30" value="3.9088753302931836" />
-      <entry key="S60" value="4.74383281626466" />
-      <entry key="M2" value="5.574151919252052" />
-      <entry key="M5" value="6.795073395443677" />
-      <entry key="M10" value="8.227911205593877" />
-      <entry key="M15" value="9.247578148850707" />
-      <entry key="M30" value="11.575619935102246" />
-      <entry key="H1" value="22.048943949708377" />
-      <entry key="H2" value="55.78853852203133" />
-      <entry key="H4" value="110.50618027366875" />
-      <entry key="D1" value="222.49073196280852" />
-      <entry key="W1" value="254.1909577511102" />
+      <entry key="MS100" value="1.047543759105064" />
+      <entry key="MS500" value="1.8520183800422294" />
+      <entry key="S2" value="3.1119906901385854" />
+      <entry key="S5" value="3.6193754614535147" />
+      <entry key="S10" value="3.9473714513443583" />
+      <entry key="S30" value="4.8693383934494054" />
+      <entry key="S60" value="5.719780718906222" />
+      <entry key="M2" value="6.5600029787298855" />
+      <entry key="M5" value="7.788168926218372" />
+      <entry key="M10" value="9.223729955832141" />
+      <entry key="M15" value="10.244444934874098" />
+      <entry key="M30" value="12.573658774773968" />
+      <entry key="H1" value="23.047076086645145" />
+      <entry key="H2" value="56.786175425691845" />
+      <entry key="H4" value="111.50383983311961" />
+      <entry key="D1" value="223.48994659055617" />
+      <entry key="W1" value="255.19082956931695" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="2.270517103894104E-136" />
-      <entry key="S10" value="1.5068235145145915E-68" />
-      <entry key="S30" value="2.4699460256442486E-23" />
-      <entry key="S60" value="4.969855154473062E-12" />
-      <entry key="M2" value="2.229317194674878E-6" />
-      <entry key="M5" value="0.005486163500515469" />
-      <entry key="M10" value="0.07407145554302201" />
-      <entry key="M15" value="0.1766863366211783" />
-      <entry key="M30" value="0.4583508832314616" />
-      <entry key="H1" value="1.2716278339141198" />
-      <entry key="H2" value="4.855233935554903" />
-      <entry key="H4" value="13.587840168433178" />
-      <entry key="D1" value="37.7416709323532" />
-      <entry key="W1" value="45.53718359766918" />
+      <entry key="S5" value="2.136161768900168E-136" />
+      <entry key="S10" value="1.46156141468642E-68" />
+      <entry key="S30" value="2.4449633664976054E-23" />
+      <entry key="S60" value="4.944657082647494E-12" />
+      <entry key="M2" value="2.2236584905617814E-6" />
+      <entry key="M5" value="0.005480589013699815" />
+      <entry key="M10" value="0.07403381400216166" />
+      <entry key="M15" value="0.1766264727205476" />
+      <entry key="M30" value="0.4582732286804601" />
+      <entry key="H1" value="1.2715201087248063" />
+      <entry key="H2" value="4.855028277083747" />
+      <entry key="H4" value="13.587552387858132" />
+      <entry key="D1" value="37.7415377076528" />
+      <entry key="W1" value="45.537160634468975" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9167439300681878" />
-      <entry key="MS500" value="1.523649101636993" />
-      <entry key="S2" value="2.4382478937248817" />
-      <entry key="S5" value="2.7739811917265214" />
-      <entry key="S10" value="3.0331846316528237" />
-      <entry key="S30" value="3.9063045580642353" />
-      <entry key="S60" value="4.740856876497307" />
-      <entry key="M2" value="5.570731030085063" />
-      <entry key="M5" value="6.795141769680376" />
-      <entry key="M10" value="8.295496159669515" />
-      <entry key="M15" value="9.41811250090298" />
-      <entry key="M30" value="12.029351834156842" />
-      <entry key="H1" value="23.317178667040213" />
-      <entry key="H2" value="60.64042832119898" />
-      <entry key="H4" value="124.09053861213128" />
-      <entry key="D1" value="260.2310306335487" />
-      <entry key="W1" value="299.7279095950467" />
+      <entry key="MS100" value="0.09078876651758126" />
+      <entry key="MS500" value="1.3712687297657435" />
+      <entry key="S2" value="2.9519608034570908" />
+      <entry key="S5" value="3.5506600344423083" />
+      <entry key="S10" value="3.912035470078899" />
+      <entry key="S30" value="4.856678965775525" />
+      <entry key="S60" value="5.7117496853583285" />
+      <entry key="M2" value="6.554052460164726" />
+      <entry key="M5" value="7.787221131694077" />
+      <entry key="M10" value="9.29077238590341" />
+      <entry key="M15" value="10.414582692863265" />
+      <entry key="M30" value="13.027144380209357" />
+      <entry key="H1" value="24.315118651833235" />
+      <entry key="H2" value="61.63781734994236" />
+      <entry key="H4" value="125.08788928547683" />
+      <entry key="D1" value="261.2301085115299" />
+      <entry key="W1" value="300.7277579458965" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -203,6 +205,7 @@
       <workItem from="1787682873780" duration="2272000" />
       <workItem from="1787685175756" duration="319000" />
       <workItem from="1787809887082" duration="585000" />
+      <workItem from="1787875830815" duration="1370000" />
     </task>
     <task id="LOCAL-00001" summary="Make Linux windows non-transparent and set default background color support">
       <option name="closed" value="true" />
@@ -212,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787810267315</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Make Windows and Linux windows non-transparent, set default background color, and update README structure">
+      <option name="closed" value="true" />
+      <created>1787875957943</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1787875957943</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +231,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Make Linux windows non-transparent and set default background color support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make Linux windows non-transparent and set default background color support" />
+    <MESSAGE value="Make Windows and Linux windows non-transparent, set default background color, and update README structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make Windows and Linux windows non-transparent, set default background color, and update README structure" />
   </component>
 </project>
