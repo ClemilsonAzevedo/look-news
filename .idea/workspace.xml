@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84384528-7906-437d-a3c2-b8a417b5b903" name="Changes" comment="chore: bump version to 2026.08.27">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/api/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tray/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/tray/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="84384528-7906-437d-a3c2-b8a417b5b903" name="Changes" comment="docs: streamline README files, simplify installation steps, and update tray diagram" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,7 +155,7 @@
       <workItem from="1787810476258" duration="3102000" />
       <workItem from="1787869441958" duration="3511000" />
       <workItem from="1787883492154" duration="2178000" />
-      <workItem from="1787955362262" duration="1140000" />
+      <workItem from="1787955362262" duration="1203000" />
     </task>
     <task id="LOCAL-00001" summary="add scripts to install via curl">
       <option name="closed" value="true" />
@@ -203,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787884239121</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="docs: streamline README files, simplify installation steps, and update tray diagram">
+      <option name="closed" value="true" />
+      <created>1787956546792</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1787956546792</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +216,7 @@
     <MESSAGE value="docs: add new instalation method and reorganize" />
     <MESSAGE value="enhance: improve installer scripts with progress indicators and error handling" />
     <MESSAGE value="chore: bump version to 2026.08.27" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: bump version to 2026.08.27" />
+    <MESSAGE value="docs: streamline README files, simplify installation steps, and update tray diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: streamline README files, simplify installation steps, and update tray diagram" />
   </component>
 </project>

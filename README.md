@@ -5,8 +5,8 @@
 <h1 align="center">Look News</h1>
 
 <p align="center">
-  Agregador de notícias via RSS/Atom/RDF.<br>
-  Filtra por relevância com IA e entrega direto na bandeja do sistema.
+  RSS/Atom/RDF news aggregator.<br>
+  Filters by relevance with AI and delivers directly to the system tray.
 </p>
 
 <p align="center">
@@ -15,49 +15,51 @@
   </a>
 </p>
 
-## Instalação
+## Installation
 
 **macOS / Linux**
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/clemilsonazevedo/look-news/main/install.sh | bash
 ```
 
 **Windows** (PowerShell)
+
 ```powershell
 irm https://raw.githubusercontent.com/clemilsonazevedo/look-news/main/install.ps1 | iex
 ```
 
-Pronto. Só abrir o app e ele aparece como ícone na bandeja do sistema.
+Done. Just open the app and it will appear as an icon in the system tray.
 
-## Como funciona
+## How it works
 
-Roda em segundo plano. Clique no ícone para ver as notícias mais relevantes das suas fontes.
+Runs in the background. Click the icon to see the most relevant news from your sources.
 
 <p align="center">
-  <img src="tray/assets/tray-diagram.png" alt="Posicionamento na bandeja" width="600" />
+  <img src="tray/assets/tray-diagram.png" alt="System tray placement" width="600" />
 </p>
 
-## Fontes para começar
+## Sources to get started
 
-| Fonte | Feed |
-|-------|------|
-| Huncoding | `https://huncoding.com/feed.xml` |
-| TabNews | `https://www.tabnews.com.br/recentes/rss` |
-| Tecnoblog | `https://tecnoblog.net/feed/` |
-| TechCrunch | `https://techcrunch.com/feed/` |
-| SecurityWeek | `https://www.securityweek.com/feed/` |
+| Source       | Feed                                      |
+| ------------ | ----------------------------------------- |
+| Huncoding    | `https://huncoding.com/feed.xml`          |
+| TabNews      | `https://www.tabnews.com.br/recentes/rss` |
+| Tecnoblog    | `https://tecnoblog.net/feed/`             |
+| TechCrunch   | `https://techcrunch.com/feed/`            |
+| SecurityWeek | `https://www.securityweek.com/feed/`      |
 
-Adicione qualquer feed RSS, Atom ou RDF. Para encontrar novos, busque por “RSS” no site ou peça a uma IA:
+Add any RSS, Atom, or RDF feed. To find new ones, search for “RSS” on the website or ask an AI:
 
-> Encontre fontes RSS sobre [seu tema]. Retorne os links diretos dos feeds.
+> Find RSS sources about [your topic]. Return the direct feed links.
 
-## Estrutura
+## Structure
 
-| Parte | Descrição | Docs |
-|-------|-----------|------|
-| **Tray** | App Electron (bandeja) | [tray/README.md](tray/README.md) |
-| **API** | Backend Go + IA | [api/README.md](api/README.md) |
+| Part     | Description                | Docs                             |
+| -------- | -------------------------- | -------------------------------- |
+| **Tray** | Electron app (system tray) | [tray/README.md](tray/README.md) |
+| **API**  | Go backend + AI            | [api/README.md](api/README.md)   |
 
-## Licença
+## License
 
 MIT

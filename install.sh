@@ -18,52 +18,52 @@ spinner() {
 }
 
 echo "══════════════════════════════════════"
-echo "  Look News — Instalador"
+echo "  Look News — Installer"
 echo "══════════════════════════════════════"
 echo ""
 
-echo "[1/5] Buscando a última versão..."
+echo "[1/5] Looking for the latest version..."
 RELEASE_JSON=$(curl -fsSL "$API_URL")
 ZIP_URL=$(echo "$RELEASE_JSON" | grep -o '"browser_download_url": *"[^"]*\.zip"' | head -n 1 | sed -E 's/.*"(https[^"]+)"/\1/')
 
 if [ -z "$ZIP_URL" ]; then
-  echo "  ✗ Não encontrei um .zip na última release."
-  echo "    Confira em: https://github.com/$REPO/releases"
+  echo "  ✗ Could not find a .zip in the latest release."
+  echo "    Check: https://github.com/$REPO/releases"
   exit 1
 fi
-echo "  ✓ Versão encontrada"
+echo "  ✓ Version found"
 
 TMP_DIR=$(mktemp -d)
-echo "[2/5] Baixando..."
+echo "[2/5] Downloading..."
 curl --progress-bar -L -o "$TMP_DIR/look-news.zip" "$ZIP_URL"
-echo "  ✓ Download concluído"
+echo "  ✓ Download completed"
 
-echo "[3/5] Extraindo..."
+echo "[3/5] Extracting..."
 (
   unzip -q "$TMP_DIR/look-news.zip" -d "$TMP_DIR"
 ) &
-spinner $! "Extraindo arquivos..."
+spinner $! "Extracting files..."
 APP_PATH=$(find "$TMP_DIR" -maxdepth 2 -name "*.app" | head -n 1)
 
 if [ -z "$APP_PATH" ]; then
-  echo "  ✗ Não encontrei o .app dentro do zip."
+  echo "  ✗ Could not find the .app inside the zip."
   rm -rf "$TMP_DIR"
   exit 1
 fi
 
-echo "[4/5] Instalando em /Applications..."
+echo "[4/5] Installing to /Applications..."
 (
   rm -rf "/Applications/Look News.app"
   cp -R "$APP_PATH" /Applications/
 ) &
-spinner $! "Copiando o aplicativo..."
+spinner $! "Copying the application..."
 
-echo "[5/5] Limpando arquivos temporários..."
+echo "[5/5] Cleaning up temporary files..."
 rm -rf "$TMP_DIR"
-echo "  ✓ Limpeza concluída"
+echo "  ✓ Cleanup completed"
 
 echo ""
 echo "══════════════════════════════════════"
-echo "  Pronto! Abra 'Look News' pelo"
-echo "  Launchpad ou Spotlight."
+echo "  Done! Open 'Look News' from"
+echo "  Launchpad or Spotlight."
 echo "══════════════════════════════════════"
