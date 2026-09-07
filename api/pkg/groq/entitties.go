@@ -46,10 +46,10 @@ type ChatCompletionResponse struct {
 	Created int    `json:"created,omitempty"`
 	Model   string `json:"model,omitempty"`
 	Choices []struct {
-		Index        int         `json:"index,omitempty"`
-		Message      Message     `json:"message,omitempty"`
-		Logprobs     interface{} `json:"logprobs,omitempty"`
-		FinishReason string      `json:"finish_reason,omitempty"`
+		Index        int     `json:"index,omitempty"`
+		Message      Message `json:"message"`
+		Logprobs     any     `json:"logprobs,omitempty"`
+		FinishReason string  `json:"finish_reason,omitempty"`
 	} `json:"choices,omitempty"`
 	Usage struct {
 		QueueTime        float64 `json:"queue_time,omitempty"`
@@ -59,9 +59,9 @@ type ChatCompletionResponse struct {
 		CompletionTime   float64 `json:"completion_time,omitempty"`
 		TotalTokens      int     `json:"total_tokens,omitempty"`
 		TotalTime        float64 `json:"total_time,omitempty"`
-	} `json:"usage,omitempty"`
+	} `json:"usage"`
 	SystemFingerprint string `json:"system_fingerprint,omitempty"`
 	XGroq             struct {
 		ID string `json:"id,omitempty"`
-	} `json:"x_groq,omitempty"`
+	} `json:"x_groq"`
 }

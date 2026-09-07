@@ -3,6 +3,7 @@ package handler
 import (
 	"log/slog"
 	"net/http"
+	"time"
 
 	"github.com/clemilsonazevedo/look-news/internal/feed"
 	"github.com/go-fuego/fuego"
@@ -48,7 +49,8 @@ func (h *Handler) HandleNews(c fuego.ContextNoBody) (NewsRes, error) {
 		arts, err := h.refresher.GetOrRefresh(url, criterion)
 
 		if err != nil {
-			slog.Warn("source failed, falling back to cache",
+			slog.Warn(
+				"source failed, falling back to cache",
 				"source", url,
 				"error", err,
 			)
@@ -68,7 +70,8 @@ func (h *Handler) HandleNews(c fuego.ContextNoBody) (NewsRes, error) {
 	}
 
 	if len(failures) == len(sources) {
-		slog.Error("all sources failed, no cache available",
+		slog.Error(
+			"all sources failed, no cache available",
 			"sources", failures,
 		)
 		return NewsRes{}, fuego.HTTPError{
@@ -77,6 +80,8 @@ func (h *Handler) HandleNews(c fuego.ContextNoBody) (NewsRes, error) {
 			Status: http.StatusServiceUnavailable,
 		}
 	}
+
+	articles = feed.FilterCurrentWeek(articles, time.Now())
 
 	etag := `"` + feed.CombineHashes(hashes) + `"`
 	w := c.Response()
