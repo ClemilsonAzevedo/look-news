@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AIDiffSettings">
+    <option name="showAIDiff" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="051c06f7-ea30-453b-8d43-c8bff16fd63e" name="Changes" comment="">
+    <list default="true" id="051c06f7-ea30-453b-8d43-c8bff16fd63e" name="Changes" comment="refactor: adjust formatting, error handling, and introduce weekly filter">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tray/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tray/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +21,13 @@
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="28" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" url="file://$USER_HOME$/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.27.0.darwin-arm64" />
   <component name="Git.Settings">
@@ -37,6 +49,68 @@
     <commands />
     <urls />
   </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.000056554447137" />
+      <entry key="S2" value="1.0867196625086986" />
+      <entry key="S5" value="1.378066530515154" />
+      <entry key="S10" value="1.6637311458429513" />
+      <entry key="S30" value="2.5096924967938543" />
+      <entry key="S60" value="3.6277377407380227" />
+      <entry key="M2" value="9.960290307371563" />
+      <entry key="M5" value="46.87307768730291" />
+      <entry key="M10" value="86.94865379403322" />
+      <entry key="M15" value="107.43570737136294" />
+      <entry key="M30" value="133.0266315203331" />
+      <entry key="H1" value="148.12392260628786" />
+      <entry key="H2" value="156.32701198732917" />
+      <entry key="H4" value="160.60311530542444" />
+      <entry key="D1" value="164.25865415933995" />
+      <entry key="W1" value="164.8938826055798" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.8014796533325246E-67" />
+      <entry key="MS500" value="4.47843084458182E-14" />
+      <entry key="S2" value="4.6004560442040166E-4" />
+      <entry key="S5" value="0.04709351270113636" />
+      <entry key="S10" value="0.245293144180564" />
+      <entry key="S30" value="1.0132290908197827" />
+      <entry key="S60" value="1.6551925435206436" />
+      <entry key="M2" value="2.196013716673045" />
+      <entry key="M5" value="2.638371042750426" />
+      <entry key="M10" value="2.816992709209067" />
+      <entry key="M15" value="2.9033599766540803" />
+      <entry key="M30" value="3.1106584732506217" />
+      <entry key="H1" value="3.3860886603262554" />
+      <entry key="H2" value="3.630679981278102" />
+      <entry key="H4" value="3.796187833686429" />
+      <entry key="D1" value="3.963001599820617" />
+      <entry key="W1" value="3.994634960900827" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="8.103033032649536E-22" />
+      <entry key="MS500" value="9.948513756474101E-5" />
+      <entry key="S2" value="0.1675296006091645" />
+      <entry key="S5" value="0.76613315466971" />
+      <entry key="S10" value="1.4157985938514142" />
+      <entry key="S30" value="3.1069099216405305" />
+      <entry key="S60" value="4.945841908566277" />
+      <entry key="M2" value="11.9307729334691" />
+      <entry key="M5" value="49.401967164279206" />
+      <entry key="M10" value="89.70695351713209" />
+      <entry key="M15" value="110.29896917883306" />
+      <entry key="M30" value="136.11669781069494" />
+      <entry key="H1" value="151.49954936757322" />
+      <entry key="H2" value="159.95241105692415" />
+      <entry key="H4" value="164.39664851825606" />
+      <entry key="D1" value="168.22121117044622" />
+      <entry key="W1" value="168.88845399834952" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="AISelfReview" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3,
   &quot;fromUser&quot;: false
@@ -51,34 +125,35 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.GoLinterPluginOnboardingV2&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.GoLinterPluginStorageMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.GoOptimizationToolWindowEnableInLayout.v333333&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.analysis.ui.options.defaults&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/clema/www/look-news/api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultGoTemplateProperty": "Go File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.GoLinterPluginOnboardingV2": "true",
+    "RunOnceActivity.GoLinterPluginStorageMigration": "true",
+    "RunOnceActivity.GoOptimizationToolWindowEnableInLayout.v333333": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.analysis.ui.options.defaults": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "go.sdk.automatically.set": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/clema/www/personal/look-news/api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMExperimentalConfigurable",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="go build github.com/clemilsonazevedo/look-news/cmd/web" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="api" />
@@ -93,8 +168,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-gosdk-63c95d513abe-9addb268e56c-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-262.9437.286" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-GO-262.9437.286" />
+        <option value="bundled-gosdk-63c95d513abe-08e7ff217c2b-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-262.10315.160" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-GO-262.10315.160" />
       </set>
     </attachedChunks>
   </component>
@@ -121,5 +196,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor: adjust formatting, error handling, and introduce weekly filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: adjust formatting, error handling, and introduce weekly filter" />
   </component>
 </project>

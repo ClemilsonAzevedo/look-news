@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bfb57c1-7fa0-4790-a015-e41332d11059" name="Changes" comment="update: synchronize workspace, add tray diagram, and adjust task details">
+    <list default="true" id="8bfb57c1-7fa0-4790-a015-e41332d11059" name="Changes" comment="style: edditing style to other platforms">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,73 +38,73 @@
     &quot;assignee&quot;: &quot;ClemilsonAzevedo&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ClemilsonAzevedo/look-news.git&quot;,
-    &quot;accountId&quot;: &quot;a06d2d0a-a6c8-42a4-9097-5f65a6ea5466&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ClemilsonAzevedo/look-news.git",
+    "accountId": "d111ae37-6afb-43cc-89b3-ef646c33c322"
   }
-}</component>
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.047543759105064" />
-      <entry key="MS500" value="1.8520183800422294" />
-      <entry key="S2" value="3.1119906901385854" />
-      <entry key="S5" value="3.6193754614535147" />
-      <entry key="S10" value="3.9473714513443583" />
-      <entry key="S30" value="4.8693383934494054" />
-      <entry key="S60" value="5.719780718906222" />
-      <entry key="M2" value="6.5600029787298855" />
-      <entry key="M5" value="7.788168926218372" />
-      <entry key="M10" value="9.223729955832141" />
-      <entry key="M15" value="10.244444934874098" />
-      <entry key="M30" value="12.573658774773968" />
-      <entry key="H1" value="23.047076086645145" />
-      <entry key="H2" value="56.786175425691845" />
-      <entry key="H4" value="111.50383983311961" />
-      <entry key="D1" value="223.48994659055617" />
-      <entry key="W1" value="255.19082956931695" />
+      <entry key="MS100" value="1.0000003564161717" />
+      <entry key="MS500" value="1.0641036545255091" />
+      <entry key="S2" value="2.3727762492207463" />
+      <entry key="S5" value="3.9434472574426285" />
+      <entry key="S10" value="4.939808671026993" />
+      <entry key="S30" value="6.433454439428716" />
+      <entry key="S60" value="7.462972610481858" />
+      <entry key="M2" value="8.413074752570871" />
+      <entry key="M5" value="9.718899037991221" />
+      <entry key="M10" value="11.183083837912953" />
+      <entry key="M15" value="12.21451099234389" />
+      <entry key="M30" value="14.555463905869738" />
+      <entry key="H1" value="25.030738612876025" />
+      <entry key="H2" value="58.766346706347285" />
+      <entry key="H4" value="113.4844699271132" />
+      <entry key="D1" value="225.4834927859188" />
+      <entry key="W1" value="257.189777155528" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="2.136161768900168E-136" />
-      <entry key="S10" value="1.46156141468642E-68" />
-      <entry key="S30" value="2.4449633664976054E-23" />
-      <entry key="S60" value="4.944657082647494E-12" />
-      <entry key="M2" value="2.2236584905617814E-6" />
-      <entry key="M5" value="0.005480589013699815" />
-      <entry key="M10" value="0.07403381400216166" />
-      <entry key="M15" value="0.1766264727205476" />
-      <entry key="M30" value="0.4582732286804601" />
-      <entry key="H1" value="1.2715201087248063" />
-      <entry key="H2" value="4.855028277083747" />
-      <entry key="H4" value="13.587552387858132" />
-      <entry key="D1" value="37.7415377076528" />
-      <entry key="W1" value="45.537160634468975" />
+      <entry key="S5" value="1.2986574201667363E-136" />
+      <entry key="S10" value="1.139586512804858E-68" />
+      <entry key="S30" value="2.2503449761119345E-23" />
+      <entry key="S60" value="4.743780113065879E-12" />
+      <entry key="M2" value="2.178022064412086E-6" />
+      <entry key="M5" value="0.005435317400233525" />
+      <entry key="M10" value="0.07372740712218022" />
+      <entry key="M15" value="0.176138794964558" />
+      <entry key="M30" value="0.4576401295270823" />
+      <entry key="H1" value="1.2706415100307242" />
+      <entry key="H2" value="4.853350616385615" />
+      <entry key="H4" value="13.58520458771156" />
+      <entry key="D1" value="37.74045073278239" />
+      <entry key="W1" value="45.53697327606363" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.09078876651758126" />
-      <entry key="MS500" value="1.3712687297657435" />
-      <entry key="S2" value="2.9519608034570908" />
-      <entry key="S5" value="3.5506600344423083" />
-      <entry key="S10" value="3.912035470078899" />
-      <entry key="S30" value="4.856678965775525" />
-      <entry key="S60" value="5.7117496853583285" />
-      <entry key="M2" value="6.554052460164726" />
-      <entry key="M5" value="7.787221131694077" />
-      <entry key="M10" value="9.29077238590341" />
-      <entry key="M15" value="10.414582692863265" />
-      <entry key="M30" value="13.027144380209357" />
-      <entry key="H1" value="24.315118651833235" />
-      <entry key="H2" value="61.63781734994236" />
-      <entry key="H4" value="125.08788928547683" />
-      <entry key="D1" value="261.2301085115299" />
-      <entry key="W1" value="300.7277579458965" />
+      <entry key="MS100" value="0.9592644339218817" />
+      <entry key="MS500" value="1.0512400279039251" />
+      <entry key="S2" value="2.321622770969447" />
+      <entry key="S5" value="3.898989062867317" />
+      <entry key="S10" value="4.910766386987905" />
+      <entry key="S30" value="6.4212683543474425" />
+      <entry key="S60" value="7.454995685248141" />
+      <entry key="M2" value="8.407109012245769" />
+      <entry key="M5" value="9.71790382708638" />
+      <entry key="M10" value="11.249821122386246" />
+      <entry key="M15" value="12.384160527394169" />
+      <entry key="M30" value="15.008313789977066" />
+      <entry key="H1" value="26.297900362747782" />
+      <entry key="H2" value="63.616309829926216" />
+      <entry key="H4" value="127.06617102944232" />
+      <entry key="D1" value="263.2225675791071" />
+      <entry key="W1" value="302.7265181471521" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -121,35 +124,36 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/clema/www/look-news/tray/assets&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/clema/www/look-news/tray/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "junie.plugin.stays.banner.dismissed": "true",
+    "last_opened_file_path": "/Users/clema/www/personal/look-news/tray",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Users/clema/www/look-news/tray/node_modules/typescript/lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets" />
@@ -182,7 +186,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.9437.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.10315.144" />
       </set>
     </attachedChunks>
   </component>
@@ -206,6 +210,9 @@
       <workItem from="1787685175756" duration="319000" />
       <workItem from="1787809887082" duration="585000" />
       <workItem from="1787875830815" duration="1979000" />
+      <workItem from="1788078031691" duration="910000" />
+      <workItem from="1788807454153" duration="382000" />
+      <workItem from="1788857618029" duration="1858000" />
     </task>
     <task id="LOCAL-00001" summary="Make Linux windows non-transparent and set default background color support">
       <option name="closed" value="true" />
@@ -231,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787882905108</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="style: edditing style to other platforms">
+      <option name="closed" value="true" />
+      <created>1788859368993</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1788859368993</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +256,7 @@
     <MESSAGE value="Make Linux windows non-transparent and set default background color support" />
     <MESSAGE value="Make Windows and Linux windows non-transparent, set default background color, and update README structure" />
     <MESSAGE value="update: synchronize workspace, add tray diagram, and adjust task details" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: synchronize workspace, add tray diagram, and adjust task details" />
+    <MESSAGE value="style: edditing style to other platforms" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: edditing style to other platforms" />
   </component>
 </project>
